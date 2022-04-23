@@ -1,110 +1,110 @@
 <?php
 defined('TYPO3_MODE') || die();
 
-(static function() {
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Albums',
-        'Default',
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => 'list, show, funk, availableeverywhere, worship',
-            \HannaRodler\Albums\Controller\SongController::class => 'list, show',
-            \HannaRodler\Albums\Controller\InterpretController::class => 'list, show',
-            \HannaRodler\Albums\Controller\RatingController::class => 'list',
-            \HannaRodler\Albums\Controller\GenreController::class => 'list, show'
-        ],
-        // non-cacheable actions
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => '',
-            \HannaRodler\Albums\Controller\SongController::class => '',
-            \HannaRodler\Albums\Controller\InterpretController::class => '',
-            \HannaRodler\Albums\Controller\RatingController::class => '',
-            \HannaRodler\Albums\Controller\GenreController::class => ''
-        ]
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Albums',
-        'Songs',
-        [
-            \HannaRodler\Albums\Controller\SongController::class => 'list, show'
-        ],
-        // non-cacheable actions
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => '',
-            \HannaRodler\Albums\Controller\SongController::class => '',
-            \HannaRodler\Albums\Controller\InterpretController::class => '',
-            \HannaRodler\Albums\Controller\RatingController::class => '',
-            \HannaRodler\Albums\Controller\GenreController::class => ''
-        ]
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Albums',
-        'Interpreters',
-        [
-            \HannaRodler\Albums\Controller\InterpretController::class => 'list, show'
-        ],
-        // non-cacheable actions
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => '',
-            \HannaRodler\Albums\Controller\SongController::class => '',
-            \HannaRodler\Albums\Controller\InterpretController::class => '',
-            \HannaRodler\Albums\Controller\RatingController::class => '',
-            \HannaRodler\Albums\Controller\GenreController::class => ''
-        ]
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Albums',
-        'Funk',
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => 'funk, show'
-        ],
-        // non-cacheable actions
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => '',
-            \HannaRodler\Albums\Controller\SongController::class => '',
-            \HannaRodler\Albums\Controller\InterpretController::class => '',
-            \HannaRodler\Albums\Controller\RatingController::class => '',
-            \HannaRodler\Albums\Controller\GenreController::class => ''
-        ]
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Albums',
-        'Availableeverywhere',
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => 'list, show'
-        ],
-        // non-cacheable actions
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => '',
-            \HannaRodler\Albums\Controller\SongController::class => '',
-            \HannaRodler\Albums\Controller\InterpretController::class => '',
-            \HannaRodler\Albums\Controller\RatingController::class => '',
-            \HannaRodler\Albums\Controller\GenreController::class => ''
-        ]
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Albums',
-        'Worship',
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => 'worship, show'
-        ],
-        // non-cacheable actions
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => '',
-            \HannaRodler\Albums\Controller\SongController::class => '',
-            \HannaRodler\Albums\Controller\InterpretController::class => '',
-            \HannaRodler\Albums\Controller\RatingController::class => '',
-            \HannaRodler\Albums\Controller\GenreController::class => ''
-        ]
-    );
-
-    // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
+(static function (){
+  \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Albums',
+    'Default',
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'list, show, availableeverywhere, funk, worship',
+      \HannaRodler\Albums\Controller\SongController::class=>'list, show',
+      \HannaRodler\Albums\Controller\InterpretController::class=>'list, show',
+      \HannaRodler\Albums\Controller\RatingController::class=>'list',
+      \HannaRodler\Albums\Controller\GenreController::class=>'list, show'
+    ],
+    // non-cacheable actions
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'',
+      \HannaRodler\Albums\Controller\SongController::class=>'',
+      \HannaRodler\Albums\Controller\InterpretController::class=>'',
+      \HannaRodler\Albums\Controller\RatingController::class=>'',
+      \HannaRodler\Albums\Controller\GenreController::class=>''
+    ]
+  );
+  
+  \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Albums',
+    'Songs',
+    [
+      \HannaRodler\Albums\Controller\SongController::class=>'list, show'
+    ],
+    // non-cacheable actions
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'',
+      \HannaRodler\Albums\Controller\SongController::class=>'',
+      \HannaRodler\Albums\Controller\InterpretController::class=>'',
+      \HannaRodler\Albums\Controller\RatingController::class=>'',
+      \HannaRodler\Albums\Controller\GenreController::class=>''
+    ]
+  );
+  
+  \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Albums',
+    'Interpreters',
+    [
+      \HannaRodler\Albums\Controller\InterpretController::class=>'list, show'
+    ],
+    // non-cacheable actions
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'',
+      \HannaRodler\Albums\Controller\SongController::class=>'',
+      \HannaRodler\Albums\Controller\InterpretController::class=>'',
+      \HannaRodler\Albums\Controller\RatingController::class=>'',
+      \HannaRodler\Albums\Controller\GenreController::class=>''
+    ]
+  );
+  
+  \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Albums',
+    'Funk',
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'funk, show'
+    ],
+    // non-cacheable actions
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'',
+      \HannaRodler\Albums\Controller\SongController::class=>'',
+      \HannaRodler\Albums\Controller\InterpretController::class=>'',
+      \HannaRodler\Albums\Controller\RatingController::class=>'',
+      \HannaRodler\Albums\Controller\GenreController::class=>''
+    ]
+  );
+  
+  \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Albums',
+    'Availableeverywhere',
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'availableeverywhere, show'
+    ],
+    // non-cacheable actions
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'',
+      \HannaRodler\Albums\Controller\SongController::class=>'',
+      \HannaRodler\Albums\Controller\InterpretController::class=>'',
+      \HannaRodler\Albums\Controller\RatingController::class=>'',
+      \HannaRodler\Albums\Controller\GenreController::class=>''
+    ]
+  );
+  
+  \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Albums',
+    'Worship',
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'worship, show'
+    ],
+    // non-cacheable actions
+    [
+      \HannaRodler\Albums\Controller\AlbumController::class=>'',
+      \HannaRodler\Albums\Controller\SongController::class=>'',
+      \HannaRodler\Albums\Controller\InterpretController::class=>'',
+      \HannaRodler\Albums\Controller\RatingController::class=>'',
+      \HannaRodler\Albums\Controller\GenreController::class=>''
+    ]
+  );
+  
+  // wizards
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+    'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     default {
@@ -165,37 +165,37 @@ defined('TYPO3_MODE') || die();
                 show = *
             }
        }'
-    );
-
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-    $iconRegistry->registerIcon(
-        'albums-plugin-default',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_default.svg']
-    );
-    $iconRegistry->registerIcon(
-        'albums-plugin-songs',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_songs.svg']
-    );
-    $iconRegistry->registerIcon(
-        'albums-plugin-interpreters',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_interpreters.svg']
-    );
-    $iconRegistry->registerIcon(
-        'albums-plugin-funk',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_funk.svg']
-    );
-    $iconRegistry->registerIcon(
-        'albums-plugin-availableeverywhere',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_availableeverywhere.svg']
-    );
-    $iconRegistry->registerIcon(
-        'albums-plugin-worship',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_worship.svg']
-    );
+  );
+  
+  $iconRegistry=\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+  $iconRegistry->registerIcon(
+    'albums-plugin-default',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source'=>'EXT:albums/Resources/Public/Icons/user_plugin_default.svg']
+  );
+  $iconRegistry->registerIcon(
+    'albums-plugin-songs',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source'=>'EXT:albums/Resources/Public/Icons/user_plugin_songs.svg']
+  );
+  $iconRegistry->registerIcon(
+    'albums-plugin-interpreters',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source'=>'EXT:albums/Resources/Public/Icons/user_plugin_interpreters.svg']
+  );
+  $iconRegistry->registerIcon(
+    'albums-plugin-funk',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source'=>'EXT:albums/Resources/Public/Icons/user_plugin_funk.svg']
+  );
+  $iconRegistry->registerIcon(
+    'albums-plugin-availableeverywhere',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source'=>'EXT:albums/Resources/Public/Icons/user_plugin_availableeverywhere.svg']
+  );
+  $iconRegistry->registerIcon(
+    'albums-plugin-worship',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source'=>'EXT:albums/Resources/Public/Icons/user_plugin_worship.svg']
+  );
 })();
