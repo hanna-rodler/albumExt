@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace HannaRodler\Albums\Controller;
 
-
 use HannaRodler\Albums\Domain\Model\Dto\Filter;
 
 /**

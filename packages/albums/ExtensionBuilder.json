@@ -17,8 +17,9 @@
                     "_default4_edit_update": false,
                     "_default5_delete": false,
                     "customActions": [
-                        "singleAlbum",
-                        "availableeverywhere"
+                        "funk",
+                        "availableeverywhere",
+                        "worship"
                     ]
                 },
                 "name": "Album",
@@ -178,9 +179,7 @@
                     "_default3_new_create": false,
                     "_default4_edit_update": false,
                     "_default5_delete": false,
-                    "customActions": [
-                        "songsForAlbum"
-                    ]
+                    "customActions": []
                 },
                 "name": "Song",
                 "objectsettings": {
@@ -633,21 +632,12 @@
             },
             {
                 "actions": {
-                    "controllerActionCombinations": "Album => singleAlbum",
+                    "controllerActionCombinations": "Album => funk,show",
                     "noncacheableActions": ""
                 },
                 "description": "",
-                "key": "singlealbums",
-                "name": "Album with Songs"
-            },
-            {
-                "actions": {
-                    "controllerActionCombinations": "Song => songsForAlbum",
-                    "noncacheableActions": ""
-                },
-                "description": "",
-                "key": "albumsongs",
-                "name": "Songs of an Album"
+                "key": "funk",
+                "name": "Funk"
             },
             {
                 "actions": {
@@ -657,6 +647,15 @@
                 "description": "",
                 "key": "availableeverywhere",
                 "name": "Available Everywhere"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Album => worship,show",
+                    "noncacheableActions": ""
+                },
+                "description": "",
+                "key": "worship",
+                "name": "Worship Albums"
             }
         ],
         "vendorName": "HannaRodler"
@@ -725,7 +724,7 @@
     ],
     "storagePath": "\/usr\/www\/users\/sstudv9k\/cms21\/packages\/",
     "log": {
-        "last_modified": "2022-03-29 01:34",
+        "last_modified": "2022-04-23 12:36",
         "extension_builder_version": "10.0.3",
         "be_user": " (1)"
     }

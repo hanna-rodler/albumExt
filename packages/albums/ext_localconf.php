@@ -6,8 +6,8 @@ defined('TYPO3_MODE') || die();
         'Albums',
         'Default',
         [
-            \HannaRodler\Albums\Controller\AlbumController::class => 'list, show, singleAlbum, availableeverywhere',
-            \HannaRodler\Albums\Controller\SongController::class => 'list, show, songsForAlbum',
+            \HannaRodler\Albums\Controller\AlbumController::class => 'list, show, funk, availableeverywhere, worship',
+            \HannaRodler\Albums\Controller\SongController::class => 'list, show',
             \HannaRodler\Albums\Controller\InterpretController::class => 'list, show',
             \HannaRodler\Albums\Controller\RatingController::class => 'list',
             \HannaRodler\Albums\Controller\GenreController::class => 'list, show'
@@ -56,25 +56,9 @@ defined('TYPO3_MODE') || die();
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'Albums',
-        'Singlealbums',
+        'Funk',
         [
-            \HannaRodler\Albums\Controller\AlbumController::class => 'singleAlbum'
-        ],
-        // non-cacheable actions
-        [
-            \HannaRodler\Albums\Controller\AlbumController::class => '',
-            \HannaRodler\Albums\Controller\SongController::class => '',
-            \HannaRodler\Albums\Controller\InterpretController::class => '',
-            \HannaRodler\Albums\Controller\RatingController::class => '',
-            \HannaRodler\Albums\Controller\GenreController::class => ''
-        ]
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Albums',
-        'Albumsongs',
-        [
-            \HannaRodler\Albums\Controller\SongController::class => 'songsForAlbum'
+            \HannaRodler\Albums\Controller\AlbumController::class => 'funk, show'
         ],
         // non-cacheable actions
         [
@@ -90,7 +74,23 @@ defined('TYPO3_MODE') || die();
         'Albums',
         'Availableeverywhere',
         [
-            \HannaRodler\Albums\Controller\AlbumController::class => 'availableeverywhere, show'
+            \HannaRodler\Albums\Controller\AlbumController::class => 'list, show'
+        ],
+        // non-cacheable actions
+        [
+            \HannaRodler\Albums\Controller\AlbumController::class => '',
+            \HannaRodler\Albums\Controller\SongController::class => '',
+            \HannaRodler\Albums\Controller\InterpretController::class => '',
+            \HannaRodler\Albums\Controller\RatingController::class => '',
+            \HannaRodler\Albums\Controller\GenreController::class => ''
+        ]
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Albums',
+        'Worship',
+        [
+            \HannaRodler\Albums\Controller\AlbumController::class => 'worship, show'
         ],
         // non-cacheable actions
         [
@@ -134,22 +134,13 @@ defined('TYPO3_MODE') || die();
                             list_type = albums_interpreters
                         }
                     }
-                    singlealbums {
-                        iconIdentifier = albums-plugin-singlealbums
-                        title = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_singlealbums.name
-                        description = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_singlealbums.description
+                    funk {
+                        iconIdentifier = albums-plugin-funk
+                        title = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_funk.name
+                        description = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_funk.description
                         tt_content_defValues {
                             CType = list
-                            list_type = albums_singlealbums
-                        }
-                    }
-                    albumsongs {
-                        iconIdentifier = albums-plugin-albumsongs
-                        title = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_albumsongs.name
-                        description = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_albumsongs.description
-                        tt_content_defValues {
-                            CType = list
-                            list_type = albums_albumsongs
+                            list_type = albums_funk
                         }
                     }
                     availableeverywhere {
@@ -159,6 +150,15 @@ defined('TYPO3_MODE') || die();
                         tt_content_defValues {
                             CType = list
                             list_type = albums_availableeverywhere
+                        }
+                    }
+                    worship {
+                        iconIdentifier = albums-plugin-worship
+                        title = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_worship.name
+                        description = LLL:EXT:albums/Resources/Private/Language/locallang_db.xlf:tx_albums_worship.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = albums_worship
                         }
                     }
                 }
@@ -184,18 +184,18 @@ defined('TYPO3_MODE') || die();
         ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_interpreters.svg']
     );
     $iconRegistry->registerIcon(
-        'albums-plugin-singlealbums',
+        'albums-plugin-funk',
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_singlealbums.svg']
-    );
-    $iconRegistry->registerIcon(
-        'albums-plugin-albumsongs',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_albumsongs.svg']
+        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_funk.svg']
     );
     $iconRegistry->registerIcon(
         'albums-plugin-availableeverywhere',
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_availableeverywhere.svg']
+    );
+    $iconRegistry->registerIcon(
+        'albums-plugin-worship',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:albums/Resources/Public/Icons/user_plugin_worship.svg']
     );
 })();

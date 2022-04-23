@@ -21,18 +21,18 @@ defined('TYPO3_MODE') || die();
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'Albums',
-    'Singlealbums',
-    'Album with Songs'
-);
-
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-    'Albums',
-    'Albumsongs',
-    'Songs of an Album'
+    'Funk',
+    'Funk'
 );
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'Albums',
     'Availableeverywhere',
     'Available Everywhere'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Albums',
+    'Worship',
+    'Worship Albums'
 );

@@ -21,23 +21,19 @@ plugin.tx_albums_default {
         layoutRootPaths.0 = EXT:albums/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_albums_default.view.layoutRootPath}
     }
-
     persistence {
         storagePid = {$plugin.tx_albums_default.persistence.storagePid}
         #recursive = 1
     }
-
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
         ignoreAllEnableFieldsInBe = 0
     }
-
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
-
 plugin.tx_albums_songs {
     view {
         templateRootPaths.0 = EXT:albums/Resources/Private/Templates/
@@ -47,23 +43,19 @@ plugin.tx_albums_songs {
         layoutRootPaths.0 = EXT:albums/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_albums_songs.view.layoutRootPath}
     }
-
     persistence {
         storagePid = {$plugin.tx_albums_songs.persistence.storagePid}
         #recursive = 1
     }
-
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
         ignoreAllEnableFieldsInBe = 0
     }
-
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
-
 plugin.tx_albums_interpreters {
     view {
         templateRootPaths.0 = EXT:albums/Resources/Private/Templates/
@@ -73,75 +65,41 @@ plugin.tx_albums_interpreters {
         layoutRootPaths.0 = EXT:albums/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_albums_interpreters.view.layoutRootPath}
     }
-
     persistence {
         storagePid = {$plugin.tx_albums_interpreters.persistence.storagePid}
         #recursive = 1
     }
-
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
         ignoreAllEnableFieldsInBe = 0
     }
-
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
-
-plugin.tx_albums_singlealbums {
+plugin.tx_albums_funk {
     view {
         templateRootPaths.0 = EXT:albums/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_albums_singlealbums.view.templateRootPath}
+        templateRootPaths.1 = {$plugin.tx_albums_funk.view.templateRootPath}
         partialRootPaths.0 = EXT:albums/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_albums_singlealbums.view.partialRootPath}
+        partialRootPaths.1 = {$plugin.tx_albums_funk.view.partialRootPath}
         layoutRootPaths.0 = EXT:albums/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_albums_singlealbums.view.layoutRootPath}
+        layoutRootPaths.1 = {$plugin.tx_albums_funk.view.layoutRootPath}
     }
-
     persistence {
-        storagePid = {$plugin.tx_albums_singlealbums.persistence.storagePid}
+        storagePid = {$plugin.tx_albums_funk.persistence.storagePid}
         #recursive = 1
     }
-
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
         ignoreAllEnableFieldsInBe = 0
     }
-
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
-
-plugin.tx_albums_albumsongs {
-    view {
-        templateRootPaths.0 = EXT:albums/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_albums_albumsongs.view.templateRootPath}
-        partialRootPaths.0 = EXT:albums/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_albums_albumsongs.view.partialRootPath}
-        layoutRootPaths.0 = EXT:albums/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_albums_albumsongs.view.layoutRootPath}
-    }
-
-    persistence {
-        storagePid = {$plugin.tx_albums_albumsongs.persistence.storagePid}
-        #recursive = 1
-    }
-
-    features {
-        #skipDefaultArguments = 1
-        # if set to 1, the enable fields are ignored in BE context
-        ignoreAllEnableFieldsInBe = 0
-    }
-
-    mvc {
-        #callDefaultActionIfActionCantBeResolved = 1
-    }
-}
-
 plugin.tx_albums_availableeverywhere {
     view {
         templateRootPaths.0 = EXT:albums/Resources/Private/Templates/
@@ -163,6 +121,28 @@ plugin.tx_albums_availableeverywhere {
         ignoreAllEnableFieldsInBe = 0
     }
 
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+plugin.tx_albums_worship {
+    view {
+        templateRootPaths.0 = EXT:albums/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_albums_worship.view.templateRootPath}
+        partialRootPaths.0 = EXT:albums/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_albums_worship.view.partialRootPath}
+        layoutRootPaths.0 = EXT:albums/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_albums_worship.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_albums_worship.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }

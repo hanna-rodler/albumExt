@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace HannaRodler\Albums\Domain\Repository;
 
-
 use HannaRodler\Albums\Domain\Model\Dto\Filter;
 
 /**
@@ -21,23 +20,24 @@ use HannaRodler\Albums\Domain\Model\Dto\Filter;
  */
 class InterpretRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-  public function findByFilter(Filter $filter){
-    $query = $this->createQuery();
-    $query->getQuerySettings()->setRespectStoragePage(false);
-    
-    $constraints=[];
-    if($filter->isSpotifyAvailable()){
-      $constraints[]=$query->equals('spotifyAvailable', true);
+
+    /**
+     * @param Filter $filter
+     */
+    public function findByFilter(Filter $filter)
+    {
+        $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(false);
+        $constraints = [];
+        if ($filter->isSpotifyAvailable()) {
+            $constraints[] = $query->equals('spotifyAvailable', true);
+        }
+        if ($filter->isAppleMusicAvailable()) {
+            $constraints[] = $query->equals('appleMusicAvailable', true);
+        }
+        if (!empty($constraints)) {
+            $query->matching($query->logicalAnd($constraints));
+        }
+        return $query->execute();
     }
-    
-    if($filter->isAppleMusicAvailable()){
-      $constraints[]=$query->equals('appleMusicAvailable', true);
-    }
-    
-    if(!empty($constraints)){
-      $query->matching($query->logicalAnd($constraints));
-    }
-    
-    return $query->execute();
-  }
 }
