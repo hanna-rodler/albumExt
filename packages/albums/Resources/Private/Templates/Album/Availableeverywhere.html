@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Default"/>
 
 If you modify this template, do not forget to change the overwrite settings
 in /Configuration/ExtensionBuilder/settings.yaml:
@@ -12,41 +12,56 @@ Availableeverywhere.html: keep
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-  <h1>Available everywhere</h1>
-  <f:debug>{_all}</f:debug>
+    <h1>Available everywhere</h1>
+    <f:debug>{_all}</f:debug>
 
-  <f:flashMessages/>
+    <f:flashMessages/>
 
-  <div class="albumOverview">
-    <div class="card-group d-grid">
-      <div class="row">
-        <f:for each="{albums}" as="album">
-          <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-            <div class="card">
-              <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show" arguments="{album : album}">
-                <f:image src="{album.media.originalResource.publicUrl}" class="card-img-top"
-                         width="200"/>
-              </f:link.action>
-              <div class="card-body">
-                <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show" arguments="{album : album}"><h4>{album.name}</h4>
-                </f:link.action>
-                <small class="text-muted"><f:count>{album.ratings}</f:count>&nbsp;Bewertungen</small>
-                <f:link.action action="show" arguments="{album : album}"><p class="card-text">
-                  {album.teaser}</p></f:link.action>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;Genres</li>
-              </ul>
-              <div class="card-footer">
-                <p><i class="fa fa-user"></i>&nbsp;&nbsp;Interpreter Name</p>
-              </div>
+    <div class="albumOverview">
+        <div class="card-group d-grid">
+            <div class="row">
+                <f:for each="{albums}" as="album">
+                    <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                        <div class="card">
+                            <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
+                                           arguments="{album : album}">
+                                <f:image src="{album.media.originalResource.publicUrl}" class="card-img-top"
+                                         width="200"/>
+                            </f:link.action>
+                            <div class="card-body">
+                                <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
+                                               arguments="{album : album}"><h4>{album.name}</h4>
+                                </f:link.action>
+                                <small class="text-muted">
+                                    <f:count>{album.ratings}</f:count>&nbsp;Bewertungen</small>
+                                <f:link.action action="show" arguments="{album : album}"><p class="card-text">
+                                    {album.teaser}</p></f:link.action>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;
+                                    <f:for each="{album.genres}" as="genre">
+                                        <span>{genre.name}</span>
+                                    </f:for>
+                                </li>
+                            </ul>
+                            <div class="card-footer">
+                                <p><i class="fa fa-user"></i>&nbsp;&nbsp;
+                                <p><i class="fa fa-user"></i>&nbsp;&nbsp;
+                                    <f:for each="{album.songs}" as="song">
+                                        <f:for each="{song.interprets}" as="interpreter">
+                                            <span>{interpreter.name}</span>
+                                        </f:for>
+                                    </f:for>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
             </div>
-          </div>
-        </f:for>
-      </div>
 
+        </div>
     </div>
-  </div>
 
 </f:section>
 </html>
