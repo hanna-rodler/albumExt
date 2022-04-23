@@ -12,6 +12,41 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Template for availableeverywhere action</h1>
+    <h1>Available everywhere action</h1>
+    <f:debug>{_all}</f:debug>
+
+    <f:flashMessages/>
+
+    <div class="albumOverview">
+      <div class="card-group d-grid">
+        <div class="row">
+          <f:for each="{albums}" as="album">
+            <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+              <div class="card">
+                <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show" arguments="{album : album}">
+                  <f:image src="{album.media.originalResource.publicUrl}" class="card-img-top"
+                           width="200"/>
+                </f:link.action>
+                <div class="card-body">
+                  <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show" arguments="{album : album}"><h4>{album.name}</h4>
+                  </f:link.action>
+                  <small class="text-muted"><span id="numComm1">#</span> Bewertungen</small>
+                  <f:link.action action="show" arguments="{album : album}"><p class="card-text">
+                    {album.teaser}</p></f:link.action>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;Genres</li>
+                </ul>
+                <div class="card-footer">
+                  <p><i class="fa fa-user"></i>&nbsp;&nbsp;Interpreter Name</p>
+                </div>
+              </div>
+            </div>
+          </f:for>
+        </div>
+
+      </div>
+    </div>
+
 </f:section>
 </html>

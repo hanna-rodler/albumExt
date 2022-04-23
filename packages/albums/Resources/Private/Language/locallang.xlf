@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:albums/Resources/Private/Language/locallang.xlf" date="2022-04-23T09:14:44Z" product-name="albums">
+	<file source-language="en" datatype="plaintext" original="EXT:albums/Resources/Private/Language/locallang.xlf" date="2022-03-29T13:26:29Z" product-name="albums">
 		<header/>
 		<body>
 			<trans-unit id="tx_albums_domain_model_album" resname="tx_albums_domain_model_album">
@@ -101,6 +101,9 @@
 			</trans-unit>
 			<trans-unit id="tx_albums_domain_model_nationality.country_full_name" resname="tx_albums_domain_model_nationality.country_full_name">
 				<source>Country Full Name</source>
+			</trans-unit>
+			<trans-unit id="backlinkLabel">
+				<source>Zurück zur Liste</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -21,14 +21,14 @@ defined('TYPO3_MODE') || die();
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'Albums',
-    'Funk',
-    'Funk Albums'
+    'Singlealbums',
+    'Album with Songs'
 );
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'Albums',
-    'Worship',
-    'Worship Albums'
+    'Albumsongs',
+    'Songs of an Album'
 );
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(

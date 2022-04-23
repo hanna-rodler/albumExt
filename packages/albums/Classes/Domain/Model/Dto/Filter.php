@@ -37,6 +37,9 @@ class Filter{
     $this->appleMusicAvailable=$appleMusicAvailable;
   }
   
+  
+
+
 }
 
 ?>

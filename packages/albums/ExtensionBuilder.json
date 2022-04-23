@@ -17,9 +17,8 @@
                     "_default4_edit_update": false,
                     "_default5_delete": false,
                     "customActions": [
-                        "funk",
-                        "availableeverywhere",
-                        "worship"
+                        "singleAlbum",
+                        "availableeverywhere"
                     ]
                 },
                 "name": "Album",
@@ -179,7 +178,9 @@
                     "_default3_new_create": false,
                     "_default4_edit_update": false,
                     "_default5_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "songsForAlbum"
+                    ]
                 },
                 "name": "Song",
                 "objectsettings": {
@@ -632,21 +633,21 @@
             },
             {
                 "actions": {
-                    "controllerActionCombinations": "Album => funk,show",
+                    "controllerActionCombinations": "Album => singleAlbum",
                     "noncacheableActions": ""
                 },
                 "description": "",
-                "key": "funk",
-                "name": "Funk Albums"
+                "key": "singlealbums",
+                "name": "Album with Songs"
             },
             {
                 "actions": {
-                    "controllerActionCombinations": "Album => worship,show",
+                    "controllerActionCombinations": "Song => songsForAlbum",
                     "noncacheableActions": ""
                 },
                 "description": "",
-                "key": "worship",
-                "name": "Worship Albums"
+                "key": "albumsongs",
+                "name": "Songs of an Album"
             },
             {
                 "actions": {
@@ -724,7 +725,7 @@
     ],
     "storagePath": "\/usr\/www\/users\/sstudv9k\/cms21\/packages\/",
     "log": {
-        "last_modified": "2022-04-23 09:14",
+        "last_modified": "2022-03-29 01:34",
         "extension_builder_version": "10.0.3",
         "be_user": " (1)"
     }
