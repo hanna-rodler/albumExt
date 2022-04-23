@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-11-19UTC15:02:510">
+        <header>
+            <authorName>Hanna Rodler</authorName>
+            <authorEmail>s2010456026@fhooe.at</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="contact">
+                <source>Contact</source>
+                <target>Kontakt</target>
+            </trans-unit>
+            <trans-unit id="openingH">
+                <source>Opening Hours</source>
+                <target>Öffnungszeiten</target>
+            </trans-unit>
+            <trans-unit id="toTop">
+                <source>to top</source>
+                <target>nach oben</target>
+            </trans-unit>
+            <trans-unit id="day1">
+                <source>Mo, Tu</source>
+                <target>Mo, Di</target>
+            </trans-unit>
+            <trans-unit id="day2">
+                <source>We, Th</source>
+                <target>Mi, Do</target>
+            </trans-unit>
+            <trans-unit id="day3">
+                <source>Fr</source>
+                <target>Fr</target>
+            </trans-unit>
+            <trans-unit id="time">
+                <source>o'clock</source>
+                <target>Uhr</target>
+            </trans-unit>
+            <trans-unit id="login">
+                <source>Login</source>
+                <target>Anmelden</target>
+            </trans-unit>
+            <!--            FORM-->
+            <trans-unit id="kinderordi_Termin.element.page-1.properties.label">
+                <source>General</source>
+                <target>Allgemein</target>
+            </trans-unit>
+            <!--Appointment for  -->
+            <trans-unit id="kinderordi_Termin.element.radiobutton-1.properties.label">
+                <source>Appointment for:</source>
+                <target>Termin für:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.radiobutton-1.properties.options.child">
+                <source>my child</source>
+                <target>mein Kind</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.radiobutton-1.properties.options.self">
+                <source>myself</source>
+                <target>mich selbst</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.radiobutton-1.1221560910">
+                <source>Please select for whom the appointment is.</source>
+                <target>Bitte auswählen für wen der Termin ist.</target>
+            </trans-unit>
+
+
+            <!-- Appointment reason  -->
+            <trans-unit id="kinderordi_Termin.element.singleselect-1.properties.label">
+                <source>Appointment because of</source>
+                <target>Termin aufgrund</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.singleselect-1.properties.options.Erkrankung">
+                <source>Illness</source>
+                <target>Erkrankung</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.singleselect-1.properties.options.Vorsorgeuntersuchung">
+                <source>Preventive medical checkup</source>
+                <target>Vorsorgeuntersuchung</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.singleselect-1.properties.options.Mutter-Kind-Pass-Untersuchung">
+                <source>Mother-Child-Pass checkup</source>
+                <target>Mutter-Kind-Pass Untersuchung</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.singleselect-1.properties.options.Sonstiges">
+                <source>Other</source>
+                <target>Sonstiges</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.singleselect-1.1221560910">
+                <source>Please select for whom the appointment is.</source>
+                <target>Bitte geben Sie wofür der Termin ist.</target>
+            </trans-unit>
+
+            <!--Page 2-->
+            <trans-unit id="kinderordi_Termin.element.page-2.properties.label">
+                <source>Personal Data</source>
+                <target>Persönliche Daten</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.fieldset-1.properties.label">
+                <source>Patient Information</source>
+                <target>Patienteninformationen</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.fieldset-2.properties.label">
+                <source>Contact Data</source>
+                <target>Kontaktdaten</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.fieldset-3.properties.label">
+                <source>Further Information</source>
+                <target>Weitere Informationen</target>
+            </trans-unit>
+
+
+            <!-- first name-->
+            <trans-unit id="kinderordi_Termin.element.text-1.properties.label">
+                <source>First Name:</source>
+                <target>Vorname:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1221560910">
+                <source>Plase enter first name.</source>
+                <target>Bitte Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1238110957">
+                <source>Plase enter first name.</source>
+                <target>Bitte Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1269883975">
+                <source>Plase enter first name.</source>
+                <target>Bitte Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1428504122">
+                <source>Plase enter a valid first name.</source>
+                <target>Bitte gültigen Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1238108068">
+                <source>Plase enter first name.</source>
+                <target>Bitte gültigen Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1238108069">
+                <source>Plase enter first name.</source>
+                <target>Bitte gültigen Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1221560718">
+                <source>Plase enter first name.</source>
+                <target>Bitte gültigen Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1347992400">
+                <source>Plase enter first name.</source>
+                <target>Bitte gültigen Vornamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-1.1347992453">
+                <source>Plase enter first name.</source>
+                <target>Bitte gültigen Vornamen eingeben.</target>
+            </trans-unit>
+
+            <!-- last name   -->
+            <trans-unit id="kinderordi_Termin.element.text-2.properties.label">
+                <source>Last Name:</source>
+                <target>Vorname:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1221560910">
+                <source>Plase enter a last name.</source>
+                <target>Bitte Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1221560718">
+                <source>Plase enter a last name.</source>
+                <target>Bitte Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1347992400">
+                <source>Plase enter a last name.</source>
+                <target>Bitte Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1347992453">
+                <source>Plase enter a last name.</source>
+                <target>Bitte Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1238110957">
+                <source>Plase enter valid a last name.</source>
+                <target>Bitte gültigen Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1269883975">
+                <source>Plase enter valid a last name.</source>
+                <target>Bitte gültigen Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1428504122">
+                <source>Plase enter valid a last name.</source>
+                <target>Bitte gültigen Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1238108068">
+                <source>Plase enter valid a last name.</source>
+                <target>Bitte gültigen Nachnamen eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-2.1238108069">
+                <source>Plase enter valid a last name.</source>
+                <target>Bitte gültigen Nachnamen eingeben.</target>
+            </trans-unit>
+
+            <!--            Date of birth-->
+            <trans-unit id="kinderordi_Termin.element.date-1.properties.label">
+                <source>Date of Birth:</source>
+                <target>Geburtsdatum:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.date-1.1221560910">
+                <source>Plase enter date of birth.</source>
+                <target>Bitte Geburtsdatum eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.date-1.1221560718">
+                <source>Plase enter date of birth.</source>
+                <target>Bitte Geburtsdatum eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.date-1.1347992400">
+                <source>Plase enter date of birth.</source>
+                <target>Bitte Geburtsdatum eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.date-1.1347992453">
+                <source>Plase enter date of birth.</source>
+                <target>Bitte Geburtsdatum eingeben.</target>
+            </trans-unit>
+
+            <!--            Social security number -->
+            <trans-unit id="kinderordi_Termin.element.number-1.properties.label">
+                <source>Social Security Number:</source>
+                <target>Sozialversicherungsnummer:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.number-1.properties.elementDescription">
+                <source>4-digit Number + DD/MM/YY of date of birth</source>
+                <target>4-stellige Nummer + TT/MM/JJ von Geburtsdatum</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-1.1221560910">
+                <source>Please enter social security number.</source>
+                <target>Bitte Sozialversicherungsnummer eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-1.1221560718">
+                <source>Please enter social security number.</source>
+                <target>Bitte Sozialversicherungsnummer eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-1.1347992400">
+                <source>Please enter social security number.</source>
+                <target>Bitte Sozialversicherungsnummer eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-1.1347992453">
+                <source>Please enter social security number.</source>
+                <target>Bitte Sozialversicherungsnummer eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-1.1221563685">
+                <source>Please enter a valid social security number.</source>
+                <target>Bitte gültige Sozialversicherungsnummer eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-1.1221561046">
+                <source>Please enter a valid social security number.</source>
+                <target>Bitte gültige Sozialversicherungsnummer eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-1.1221560288">
+                <source>Social security number must be a number.</source>
+                <target>Sozialversicherungsnummer muss eine Nummer sein.</target>
+            </trans-unit>
+
+            <!--            email-->
+            <trans-unit id="kinderordi_Termin.element.email-1.properties.label">
+                <source>Email:</source>
+                <target>E-Mail:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.email-1.1221559976">
+                <source>Please enter a valid email address.</source>
+                <target>Bitte gültige E-Mail Adresse angeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.email-1.1221560910">
+                <source>Please enter an email adress.</source>
+                <target>Bitte E-Mail Adresse eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.email-1.1221560718">
+                <source>Please enter an email adress.</source>
+                <target>Bitte E-Mail Adresse eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.email-1.1347992400">
+                <source>Please enter an email adress.</source>
+                <target>Bitte E-Mail Adresse eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.email-1.1347992453">
+                <source>Please enter an email adress.</source>
+                <target>Bitte E-Mail Adresse eingeben.</target>
+            </trans-unit>
+
+            <!--            telephone number-->
+            <trans-unit id="kinderordi_Termin.element.telephone-1.properties.label">
+                <source>Telephone Number:</source>
+                <target>Telefonnummer:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.telephone-1.properties.elementDescription">
+                <source>Please fill in if you want to be called back.</source>
+                <target>Bei Wunsch für Rückruf bitte angeben.</target>
+            </trans-unit>
+
+            <!--            street-->
+            <trans-unit id="kinderordi_Termin.element.text-4.properties.label">
+                <source>Street and Number:</source>
+                <target>Straße und Hausnummer:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-4.1221560910">
+                <source>Please enter your adress.</source>
+                <target>Bitte Adresse eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-4.1221560718">
+                <source>Please enter your adress.</source>
+                <target>Bitte Adresse eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-4.1347992400">
+                <source>Please enter your adress.</source>
+                <target>Bitte Adresse eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-4.1347992453">
+                <source>Please enter your adress.</source>
+                <target>Bitte Adresse eingeben.</target>
+            </trans-unit>
+
+
+            <!--            postal code-->
+            <trans-unit id="kinderordi_Termin.element.number-2.properties.label">
+                <source>Postal Code:</source>
+                <target>PLZ:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-2.1221561046">
+                <source>Please enter your valid postal code.</source>
+                <target>Bitte gültige PLZ eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-2.1221560910">
+                <source>Please enter your postal code.</source>
+                <target>Bitte PLZ eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-2.1221560718">
+                <source>Please enter your postal code.</source>
+                <target>Bitte PLZ eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-2.1347992400">
+                <source>Please enter your postal code.</source>
+                <target>Bitte PLZ eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.number-2.1347992453">
+                <source>Please enter your postal code.</source>
+                <target>Bitte PLZ eingeben.</target>
+            </trans-unit>
+
+
+            <!--            city-->
+            <trans-unit id="kinderordi_Termin.element.text-5.properties.label">
+                <source>City:</source>
+                <target>Stadt:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1221560910">
+                <source>Please fill in the city you live in.</source>
+                <target>Bitte Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1221560718">
+                <source>Please fill in the city you live in.</source>
+                <target>Bitte Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1269883975">
+                <source>Please fill in the city you live in.</source>
+                <target>Bitte Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1347992400">
+                <source>Please fill in the city you live in.</source>
+                <target>Bitte Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1347992453">
+                <source>Please fill in the city you live in.</source>
+                <target>Bitte Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1238110957">
+                <source>Please fill in a valid city.</source>
+                <target>Bitte gültige Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1269883975">
+                <source>Please fill in a valid city.</source>
+                <target>Bitte gültige Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1428504122">
+                <source>Please fill in a valid city.</source>
+                <target>Bitte gültige Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1238108068">
+                <source>Please fill in a valid city.</source>
+                <target>Bitte gültige Stadt eingeben.</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.validation.error.text-5.1238108069">
+                <source>Please fill in a valid city.</source>
+                <target>Bitte gültige Stadt eingeben.</target>
+            </trans-unit>
+
+            <!--            message-->
+            <trans-unit id="kinderordi_Termin.element.textarea-1.properties.label">
+                <source>Message:</source>
+                <target>Nachricht:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.textarea-1.properties.placeholder">
+                <source>Do you want to tell us something else?</source>
+                <target>Möchten Sie uns noch eine Nachricht hinterlassen?</target>
+            </trans-unit>
+
+            <!--            appointment-->
+            <trans-unit id="kinderordi_Termin.element.text-3.properties.label">
+                <source>Appointment requests:</source>
+                <target>Terminvorschläge:</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.text-3.properties.placeholder">
+                <source>e.g.: Tuesday afternoons</source>
+                <target>z.B: Dienstag Nachmittage</target>
+            </trans-unit>
+
+            <!--            Buttons-->
+            <trans-unit id="kinderordi_Termin.element.page-1.renderingOptions.nextButtonLabel">
+                <source>Next</source>
+                <target>Weiter</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.page-2.renderingOptions.nextButtonLabel">
+                <source>Summary</source>
+                <target>Zusammenfassung</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.page-2.renderingOptions.previousButtonLabel">
+                <source>Back</source>
+                <target>Zurück</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.summarypage-1.renderingOptions.previousButtonLabel">
+                <source>Back</source>
+                <target>Zurück</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.summarypage-1.renderingOptions.previousButtonLabel">
+                <source>Back</source>
+                <target>Zurück</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.element.kinderordi_Termin.renderingOptions.submitButtonLabel">
+                <source>Submit</source>
+                <target>Absenden</target>
+            </trans-unit>
+            <trans-unit id="kinderordi_Termin.finisher.EmailToSender.subject">
+                <source>Appointment Request for {text-1} {text-2} is being processed.</source>
+                <target>Terminanfrage für {text-1} {text-2} in Bearbeitung.</target>
+            </trans-unit>
+
+
+        </body>
+    </file>
+</xliff>

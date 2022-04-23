@@ -1,0 +1,20 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+
+#mask default TS
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rodler_kinderordi/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Menu/Menu.main.typoscript'
+@import 'EXT:form/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Form/Form.config.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Lang/Lang.switch.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/News/news.config.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Page/Page.main.typoscript'

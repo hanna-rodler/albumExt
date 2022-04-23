@@ -1,0 +1,11 @@
+#
+# PageTS for Rodler Kinderordi
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rodler_kinderordi/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rodler_kinderordi/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rodler_kinderordi/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rodler_kinderordi/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+
+tx_news.templateLayouts {
+    1 = Rodler News
+}

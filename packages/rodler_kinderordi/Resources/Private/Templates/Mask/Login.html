@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<!-- TODO: Registrierung und Passwort vergessen -->
+<div class="row">
+    <f:if condition="{data.tx_mask_header}">
+        <h2>{data.tx_mask_header}</h2>
+    </f:if>
+</div>
+<div class="row">
+    <div class="col-md-7 order-1 order-md-first">
+        <form class="row g-3">
+            <div class="col-12">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-md-10">
+                    <input type="email" class="form-control" id="inputEmail3">
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-md-10">
+                    <input type="password" class="form-control" id="inputPassword3">
+                </div>
+            </div>
+            <div class="col-md-10 d-flex justify-content-end">
+                <div>
+                    <f:link.page pageUid="21" class="btn btn-secondary">Login <i class="fa fa-sign-in"></i></f:link.page>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5 order-first order-md-last">
+        <f:if condition="{data.tx_mask_img}">
+            <f:for each="{data.tx_mask_img}" as="file">
+                <f:image class="img-fluid" image="{file}"/>
+                {file.description}
+            </f:for>
+        </f:if>
+    </div>
+</div>

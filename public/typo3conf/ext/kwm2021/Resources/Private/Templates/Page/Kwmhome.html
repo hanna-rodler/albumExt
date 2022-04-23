@@ -1,0 +1,69 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<!--rendert header-->
+<f:layout name="default"/>
+
+<f:section name="content">
+
+   <!-- Banner -->
+   <section id="banner">
+
+      <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
+
+
+   </section>
+
+   <!-- Section -->
+   <section>
+      <header class="major">
+         <h2><f:translate key="LLL:EXT:kwm2021/Resources/Private/Language/locallang.xlf:statement"/></h2>
+      </header>
+      <div class="features">
+         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+      </div>
+   </section>
+
+   <!-- Section -->
+   <section>
+      <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}"/>
+
+
+      <header class="major">
+         <h2><f:translate key="LLL:EXT:kwm2021/Resources/Private/Language/locallang.xlf:focus"/></h2>
+      </header>
+      <div class="posts">
+         <article>
+            <a href="#" class="image">
+               <f:image src="EXT:kwm2021/Resources/Public/Images/pic01.jpg" alt=""/>
+            </a>
+            <h3>Web</h3>
+            <p>Man lernt alles zu HTML, CSS und natürlich JavaScript</p>
+            <ul class="actions">
+               <li><a href="#" class="button"><f:translate key="LLL:EXT:kwm2021/Resources/Private/Language/locallang.xlf:more"/></a></li>
+            </ul>
+         </article>
+         <article>
+            <a href="#" class="image">
+               <f:image src="EXT:kwm2021/Resources/Public/Images/pic02.jpg" alt=""/>
+            </a>
+            <h3>E-Learning</h3>
+            <p>Von WBT bis zu Lernvideos - und dann noch Articulate Storyline</p>
+            <ul class="actions">
+               <li><a href="#" class="button"><f:translate key="LLL:EXT:kwm2021/Resources/Private/Language/locallang.xlf:more"/></a></li>
+            </ul>
+         </article>
+         <article>
+            <a href="#" class="image">
+               <f:image src="EXT:kwm2021/Resources/Public/Images/pic03.jpg" alt=""/>
+            </a>
+            <h3>UX</h3>
+            <p>Schöne Websites, die auch noch benutzbar sind</p>
+            <ul class="actions">
+               <li><a href="#" class="button"><f:translate key="LLL:EXT:kwm2021/Resources/Private/Language/locallang.xlf:more"/></a></li>
+            </ul>
+         </article>
+      </div>
+   </section>
+
+</f:section>

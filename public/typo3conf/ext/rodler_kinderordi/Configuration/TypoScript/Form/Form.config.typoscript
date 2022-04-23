@@ -1,0 +1,10 @@
+plugin.tx_form.settings.yamlConfigurations.100 = EXT:rodler_kinderordi/Configuration/Yaml/Forms/FormSetup.yaml
+module.tx_form.settings.yamlConfigurations.100 = EXT:rodler_kinderordi/Configuration/Yaml/Forms/FormSetup.yaml
+
+plugin.tx_form {
+    view {
+        templateRootPaths {
+            10 = EXT:rodler_kinderordi/Resources/Private/Templates/Form
+        }
+    }
+}

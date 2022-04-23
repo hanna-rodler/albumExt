@@ -1,0 +1,113 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+This template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Album:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <f:debug>{_all}</f:debug>
+    <h1>Listing for Album</h1>
+
+    <f:flashMessages/>
+    <div class="albumOverview">
+        <div class="card-group d-grid">
+            <div class="row">
+                <f:for each="{albums}" as="album">
+                    <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                        <div class="card">
+                            <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show" arguments="{album : album}">
+                                <f:image src="{album.media.originalResource.publicUrl}" class="card-img-top"
+                                         width="200"/>
+                            </f:link.action>
+                            <div class="card-body">
+                                <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show" arguments="{album : album}"><h4>{album.name}</h4>
+                                </f:link.action>
+                                <small class="text-muted"><span id="numComm1">#</span> Bewertungen</small>
+                                <f:link.action action="show" arguments="{album : album}"><p class="card-text">
+                                    {album.teaser}</p></f:link.action>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;Genres</li>
+                            </ul>
+                            <div class="card-footer">
+                                <p><i class="fa fa-user"></i>&nbsp;&nbsp;Interpreter Name</p>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+
+        </div>
+    </div>
+
+    <f:comment>
+        <table class="tx_albums">
+            <tr>
+                <th>
+                    <f:translate key="tx_albums_domain_model_album.name"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_album.media"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_album.teaser"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_album.description"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_album.release_date"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_album.spotify_available"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_album.apple_music_available"/>
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+            <f:for each="{albums}" as="album">
+                <tr>
+                    <td>
+                        <f:link.action action="show" arguments="{album : album}">{album.name}</f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{album : album}">
+                            <f:image src="{album.media.originalResource.publicUrl}" width="200"/>
+                        </f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{album : album}">{album.teaser}</f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{album : album}">{album.description}</f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{album : album}">{album.releaseDate -> f:format.date()}
+                        </f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{album : album}">{album.spotifyAvailable}
+                        </f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{album : album}">{album.appleMusicAvailable}
+                        </f:link.action>
+                    </td>
+                </tr>
+            </f:for>
+        </table>
+    </f:comment>
+
+</f:section>
+</html>

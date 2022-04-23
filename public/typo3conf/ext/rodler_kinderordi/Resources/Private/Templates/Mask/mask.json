@@ -1,0 +1,601 @@
+{
+    "sys_file_reference": {
+        "elements": [],
+        "sql": {
+            "tx_mask_employeeimg": {
+                "sys_file_reference": {
+                    "tx_mask_employeeimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_img": {
+                "sys_file_reference": {
+                    "tx_mask_img": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_logo": {
+                "sys_file_reference": {
+                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_pdf": {
+                "sys_file_reference": {
+                    "tx_mask_pdf": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_resourceimg": {
+                "sys_file_reference": {
+                    "tx_mask_resourceimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": [],
+        "palettes": []
+    },
+    "tt_content": {
+        "elements": {
+            "downloadpreview": {
+                "key": "downloadpreview",
+                "label": "DownloadPreview",
+                "description": "",
+                "shortLabel": "",
+                "color": "#606ebd",
+                "icon": "fa-download",
+                "columns": [
+                    "tx_mask_resource",
+                    "tx_mask_resourceimg",
+                    "tx_mask_desc",
+                    "tx_mask_pdf"
+                ],
+                "labels": [
+                    "Ueberschrift",
+                    "Bild",
+                    "Beschreibung",
+                    "PDF f\u00fcr Download"
+                ],
+                "descriptions": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "sorting": 1
+            },
+            "footer": {
+                "key": "footer",
+                "label": "footer",
+                "description": "",
+                "shortLabel": "",
+                "color": "#000000",
+                "icon": "",
+                "columns": [
+                    "tx_mask_logo",
+                    "tx_mask_f_contact",
+                    "tx_mask_f_openinghours"
+                ],
+                "labels": [
+                    "Logo",
+                    "Kontakt",
+                    "\u00d6ffnungszeiten"
+                ],
+                "descriptions": [
+                    "",
+                    "",
+                    ""
+                ],
+                "sorting": 6
+            },
+            "kontakt": {
+                "key": "kontakt",
+                "label": "Kontakt",
+                "description": "",
+                "shortLabel": "",
+                "color": "#05668d",
+                "icon": "fa-address-book",
+                "columns": [
+                    "tx_mask_street",
+                    "tx_mask_city",
+                    "tx_mask_state",
+                    "tx_mask_telnumber"
+                ],
+                "labels": [
+                    "Stra\u00dfe und Hausnummer",
+                    "PLZ und Stadt",
+                    "Bundesland",
+                    "Telefonnummer"
+                ],
+                "descriptions": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "sorting": 3
+            },
+            "login": {
+                "key": "login",
+                "label": "Login",
+                "description": "",
+                "shortLabel": "",
+                "color": "#05668d",
+                "icon": "fa-sign-in",
+                "columns": [
+                    "tx_mask_header",
+                    "tx_mask_img"
+                ],
+                "labels": [
+                    "Header",
+                    "Bild"
+                ],
+                "descriptions": [
+                    "",
+                    ""
+                ],
+                "sorting": 5
+            },
+            "oeffnungszeiten": {
+                "key": "oeffnungszeiten",
+                "label": "Oeffnungszeiten",
+                "description": "",
+                "shortLabel": "",
+                "color": "#05668d",
+                "icon": "fa-hourglass",
+                "columns": [
+                    "tx_mask_open"
+                ],
+                "labels": [
+                    ""
+                ],
+                "descriptions": [
+                    ""
+                ],
+                "sorting": 4
+            },
+            "team": {
+                "key": "team",
+                "label": "Team",
+                "description": "",
+                "shortLabel": "",
+                "color": "#000000",
+                "icon": "",
+                "columns": [
+                    "tx_mask_header",
+                    "tx_mask_employees"
+                ],
+                "labels": [
+                    "Heading",
+                    "Employees"
+                ],
+                "descriptions": [
+                    "\u00dcberschrift f\u00fcr diesen Abschnitt",
+                    ""
+                ],
+                "sorting": 2
+            }
+        },
+        "sql": {
+            "tx_mask_city": {
+                "tt_content": {
+                    "tx_mask_city": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_desc": {
+                "tt_content": {
+                    "tx_mask_desc": "mediumtext"
+                }
+            },
+            "tx_mask_employees": {
+                "tt_content": {
+                    "tx_mask_employees": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_f_contact": {
+                "tt_content": {
+                    "tx_mask_f_contact": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_f_openinghours": {
+                "tt_content": {
+                    "tx_mask_f_openinghours": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_header": {
+                "tt_content": {
+                    "tx_mask_header": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_img": {
+                "tt_content": {
+                    "tx_mask_img": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_logo": {
+                "tt_content": {
+                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_open": {
+                "tt_content": {
+                    "tx_mask_open": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_pdf": {
+                "tt_content": {
+                    "tx_mask_pdf": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_resource": {
+                "tt_content": {
+                    "tx_mask_resource": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_resourceimg": {
+                "tt_content": {
+                    "tx_mask_resourceimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_state": {
+                "tt_content": {
+                    "tx_mask_state": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_street": {
+                "tt_content": {
+                    "tx_mask_street": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_telnumber": {
+                "tt_content": {
+                    "tx_mask_telnumber": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_city": {
+                "config": {
+                    "eval": "required",
+                    "placeholder": "4020 Linz",
+                    "type": "input"
+                },
+                "key": "city",
+                "fullKey": "tx_mask_city",
+                "type": "string"
+            },
+            "tx_mask_desc": {
+                "config": {
+                    "cols": "50",
+                    "eval": "required",
+                    "type": "text",
+                    "wrap": "virtual"
+                },
+                "key": "desc",
+                "fullKey": "tx_mask_desc",
+                "type": "text"
+            },
+            "tx_mask_employees": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "type": "inline"
+                },
+                "key": "employees",
+                "fullKey": "tx_mask_employees",
+                "type": "inline"
+            },
+            "tx_mask_f_contact": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1,
+                        "useSortable": 1
+                    },
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "tt_content",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": 999
+                                }
+                            }
+                        }
+                    },
+                    "type": "inline"
+                },
+                "key": "f_contact",
+                "fullKey": "tx_mask_f_contact",
+                "type": "content",
+                "cTypes": [
+                    "mask_kontakt"
+                ]
+            },
+            "tx_mask_f_openinghours": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1,
+                        "useSortable": 1
+                    },
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "tt_content",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": 999
+                                }
+                            }
+                        }
+                    },
+                    "type": "inline"
+                },
+                "key": "f_openinghours",
+                "fullKey": "tx_mask_f_openinghours",
+                "type": "content",
+                "cTypes": [
+                    "mask_oeffnungszeiten"
+                ]
+            },
+            "tx_mask_header": {
+                "config": {
+                    "default": "Team",
+                    "eval": "required",
+                    "type": "input"
+                },
+                "key": "header",
+                "fullKey": "tx_mask_header",
+                "type": "string"
+            },
+            "tx_mask_img": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "maxitems": "1",
+                    "minitems": "1",
+                    "type": "inline"
+                },
+                "key": "img",
+                "fullKey": "tx_mask_img",
+                "type": "file",
+                "imageoverlayPalette": 1
+            },
+            "tx_mask_logo": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "maxitems": "1",
+                    "minitems": "1",
+                    "type": "inline"
+                },
+                "key": "logo",
+                "fullKey": "tx_mask_logo",
+                "type": "file",
+                "imageoverlayPalette": 1
+            },
+            "tx_mask_open": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "type": "inline"
+                },
+                "key": "open",
+                "fullKey": "tx_mask_open",
+                "type": "inline"
+            },
+            "tx_mask_pdf": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "maxitems": "1",
+                    "minitems": "1",
+                    "type": "inline"
+                },
+                "key": "pdf",
+                "fullKey": "tx_mask_pdf",
+                "type": "file",
+                "allowedFileExtensions": "pdf",
+                "imageoverlayPalette": 0
+            },
+            "tx_mask_resource": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "key": "resource",
+                "fullKey": "tx_mask_resource",
+                "type": "string"
+            },
+            "tx_mask_resourceimg": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "maxitems": "1",
+                    "minitems": "1",
+                    "type": "inline"
+                },
+                "key": "resourceimg",
+                "fullKey": "tx_mask_resourceimg",
+                "type": "file",
+                "allowedFileExtensions": "jpg, jpeg, png, svg",
+                "imageoverlayPalette": 0
+            },
+            "tx_mask_state": {
+                "config": {
+                    "type": "input"
+                },
+                "key": "state",
+                "fullKey": "tx_mask_state",
+                "type": "string"
+            },
+            "tx_mask_street": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "key": "street",
+                "fullKey": "tx_mask_street",
+                "type": "string"
+            },
+            "tx_mask_telnumber": {
+                "config": {
+                    "eval": "required",
+                    "placeholder": "+43 xxx xxxxxx",
+                    "type": "input"
+                },
+                "key": "telnumber",
+                "fullKey": "tx_mask_telnumber",
+                "type": "string"
+            }
+        },
+        "palettes": []
+    },
+    "tx_mask_employees": {
+        "elements": [],
+        "sql": {
+            "tx_mask_desc": {
+                "tx_mask_employees": {
+                    "tx_mask_desc": "mediumtext"
+                }
+            },
+            "tx_mask_employeeimg": {
+                "tx_mask_employees": {
+                    "tx_mask_employeeimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_name": {
+                "tx_mask_employees": {
+                    "tx_mask_name": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_desc": {
+                "config": {
+                    "eval": "required",
+                    "type": "text",
+                    "wrap": "virtual"
+                },
+                "description": "Bezeichnung der T\u00e4tigkeit in der Ordination",
+                "label": "desc",
+                "key": "desc",
+                "fullKey": "tx_mask_desc",
+                "type": "text",
+                "inlineParent": "tx_mask_employees",
+                "order": 3
+            },
+            "tx_mask_employeeimg": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "maxitems": "1",
+                    "minitems": "1",
+                    "type": "inline"
+                },
+                "key": "employeeimg",
+                "fullKey": "tx_mask_employeeimg",
+                "type": "file",
+                "allowedFileExtensions": "png, jpg, jpeg",
+                "imageoverlayPalette": 1,
+                "inlineParent": "tx_mask_employees",
+                "order": 1
+            },
+            "tx_mask_name": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "label": "first-name_last-name",
+                "key": "name",
+                "fullKey": "tx_mask_name",
+                "type": "string",
+                "inlineParent": "tx_mask_employees",
+                "order": 2
+            }
+        },
+        "palettes": []
+    },
+    "tx_mask_open": {
+        "elements": [],
+        "sql": {
+            "tx_mask_day": {
+                "tx_mask_open": {
+                    "tx_mask_day": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_hours": {
+                "tx_mask_open": {
+                    "tx_mask_hours": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_day": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "label": "Tag",
+                "key": "day",
+                "fullKey": "tx_mask_day",
+                "type": "string",
+                "inlineParent": "tx_mask_open",
+                "order": 1
+            },
+            "tx_mask_hours": {
+                "config": {
+                    "eval": "required",
+                    "placeholder": "15:00 - 18:00 Uhr",
+                    "type": "input"
+                },
+                "label": "von - bis",
+                "key": "hours",
+                "fullKey": "tx_mask_hours",
+                "type": "string",
+                "inlineParent": "tx_mask_open",
+                "order": 2
+            }
+        },
+        "palettes": []
+    }
+}

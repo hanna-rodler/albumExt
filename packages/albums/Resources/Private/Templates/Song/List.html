@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Song:
+          List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <f:debug>{_all}</f:debug>
+    <h1>Listing for Song</h1>
+
+    <f:flashMessages />
+
+    <table class="tx_albums">
+        <tr>
+            <th><f:translate key="tx_albums_domain_model_song.name" /></th>
+            <th><f:translate key="tx_albums_domain_model_song.duration" /></th>
+            <th><f:translate key="tx_albums_domain_model_song.explicit_content" /></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <f:for each="{songs}" as="song">
+            <tr>
+                <td><f:link.action action="show" arguments="{song : song}">{song.name}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{song : song}">{song.duration}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{song : song}">{song.explicitContent}</f:link.action></td>
+            </tr>
+        </f:for>
+    </table>
+
+</f:section>
+</html>

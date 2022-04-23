@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-11-19UTC15:02:510">
+        <header>
+            <authorName>Hanna Rodler</authorName>
+            <authorEmail>s2010456026@fhooe.at</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="statement">
+                <source>Statements for KWM</source>
+                <target>Statements zum Studium</target>
+            </trans-unit>
+            <trans-unit id="focus">
+                <source>Focus in KWM</source>
+                <target>Schwerpunkte in KWM</target>
+            </trans-unit>
+            <trans-unit id="more">
+                <source>Read more</source>
+                <target>Mehr lesen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

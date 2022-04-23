@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:albums/Resources/Private/Language/locallang_csh_tx_albums_domain_model_song.xlf" date="2022-04-23T09:14:44Z" product-name="albums">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="duration.description" resname="duration.description">
+				<source>duration</source>
+			</trans-unit>
+			<trans-unit id="explicit_content.description" resname="explicit_content.description">
+				<source>explicitContent</source>
+			</trans-unit>
+			<trans-unit id="interprets.description" resname="interprets.description">
+				<source>interprets</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

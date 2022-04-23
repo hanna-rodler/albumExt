@@ -1,0 +1,380 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: kinderordi_Termin
+label: KinderordiTermin
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Anfrage wird bearbeitet'
+      recipients:
+        '{email-1}': '{text-1} {text-2}'
+      senderAddress: s2010456026@fhooe.at
+      senderName: ''
+      addHtmlPart: true
+      attachUploads: false
+      useFluidEmail: false
+      title: ''
+    identifier: EmailToSender
+  -
+    options:
+      pageUid: '59'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorherige Seite'
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: page-1
+    label: Allgemein
+    renderables:
+      -
+        properties:
+          options:
+            Anfrage: 'mein Kind'
+            Termin: 'für mich selbst'
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte geben Sie an für wen der Termin ist.'
+            -
+              code: 1221560718
+              message: 'Bitte geben Sie an für wen der Termin ist.'
+            -
+              code: 1347992400
+              message: 'Bitte geben Sie an für wen der Termin ist.'
+            -
+              code: 1347992453
+              message: 'Bitte geben Sie an für wen der Termin ist.'
+        type: RadioButton
+        identifier: radiobutton-1
+        label: 'Termin für ...'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          options:
+            Erkrankung: Erkrankung
+            Vorsorgeuntersuchung: Vorsorgeuntersuchung
+            Mutter-Kind-Pass-Untersuchung: Mutter-Kind-Pass-Untersuchung
+            Sonstiges: Sonstiges
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte wählen Sie aus wofür Sie den Termin vereinbaren.'
+            -
+              code: 1221560718
+              message: 'Bitte wählen Sie aus wofür Sie den Termin vereinbaren.'
+            -
+              code: 1347992400
+              message: 'Bitte wählen Sie aus wofür Sie den Termin vereinbaren.'
+            -
+              code: 1347992453
+              message: 'Bitte wählen Sie aus wofür Sie den Termin vereinbaren.'
+        type: SingleSelect
+        identifier: singleselect-1
+        label: 'Termin aufgrund / Termin für'
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorherige Seite'
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: page-2
+    label: 'Persönliche Daten'
+    renderables:
+      -
+        type: Fieldset
+        identifier: fieldset-1
+        label: Patienteninformationen
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: Vorname
+            properties:
+              fluidAdditionalAttributes:
+                minlength: '2'
+                maxlength: '30'
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1238110957
+                  message: 'Bitte Vorname eingeben.'
+                -
+                  code: 1269883975
+                  message: 'Bitte Vorname eingeben.'
+                -
+                  code: 1428504122
+                  message: 'Bitte Vorname eingeben.'
+                -
+                  code: 1238108068
+                  message: 'Bitte Vorname eingeben.'
+                -
+                  code: 1238108069
+                  message: 'Bitte Vorname eingeben.'
+            validators:
+              -
+                options:
+                  minimum: '2'
+                  maximum: '30'
+                identifier: StringLength
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: Nachname
+            properties:
+              fluidAdditionalAttributes:
+                minlength: '2'
+                maxlength: '30'
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1238110957
+                  message: 'Bitte Nachname eingeben'
+                -
+                  code: 1269883975
+                  message: 'Bitte Nachname eingeben'
+                -
+                  code: 1428504122
+                  message: 'Bitte Nachname eingeben'
+                -
+                  code: 1238108068
+                  message: 'Bitte Nachname eingeben'
+                -
+                  code: 1238108069
+                  message: 'Bitte Nachname eingeben'
+            validators:
+              -
+                options:
+                  minimum: '2'
+                  maximum: '30'
+                identifier: StringLength
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              dateFormat: ''
+              enableDatePicker: false
+              displayTimeSelector: false
+              validationErrorMessages:
+                -
+                  code: 1238087674
+                  message: 'Bitte '
+            type: DatePicker
+            identifier: datepicker-1
+            label: Geburtstag
+            validators:
+              -
+                identifier: DateTime
+          -
+            defaultValue: ''
+            properties:
+              fluidAdditionalAttributes:
+                step: 1
+                min: '1000000000'
+                max: '9999999999'
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221563685
+                  message: 'Bitte gültige Sozialversicherungsnummer eingeben.'
+                -
+                  code: 1221561046
+                  message: 'Bitte gültige Sozialversicherungsnummer eingeben.'
+                -
+                  code: 1221560288
+                  message: 'Bitte Sozialversicherungsnummer eingeben.'
+                -
+                  code: 1221560910
+                  message: 'Bitte Sozialversicherungsnummer angeben.'
+                -
+                  code: 1221560718
+                  message: 'Bitte Sozialversicherungsnummer angeben.'
+                -
+                  code: 1347992400
+                  message: 'Bitte Sozialversicherungsnummer angeben.'
+                -
+                  code: 1347992453
+                  message: 'Bitte Sozialversicherungsnummer angeben.'
+              elementDescription: '4-stellige Nummer + TT/MM/JJ von Geburtstag'
+            type: Number
+            identifier: number-1
+            label: Sozialversicherungs-Nummer
+            validators:
+              -
+                identifier: Number
+              -
+                options:
+                  minimum: '1000000000'
+                  maximum: '9999999999'
+                identifier: NumberRange
+              -
+                identifier: NotEmpty
+      -
+        type: Fieldset
+        identifier: fieldset-2
+        label: Kontaktdaten
+        renderables:
+          -
+            defaultValue: ''
+            type: Email
+            identifier: email-1
+            label: E-Mail
+            properties:
+              elementDescription: 'kann auch die von Erziehungsberechtigter*m sein.'
+              validationErrorMessages:
+                -
+                  code: 1221559976
+                  message: 'Bitte gültige E-Mail Adresse eingeben.'
+                -
+                  code: 1221560910
+                  message: 'Bitte E-Mail-Adresse eingeben.'
+                -
+                  code: 1221560718
+                  message: 'Bitte E-Mail-Adresse eingeben.'
+                -
+                  code: 1347992400
+                  message: 'Bitte E-Mail-Adresse eingeben.'
+                -
+                  code: 1347992453
+                  message: 'Bitte E-Mail-Adresse eingeben.'
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: EmailAddress
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Telephone
+            identifier: telephone-1
+            label: Telefonnummer
+            properties:
+              elementDescription: 'bei Wunsch nach Rückruf bitte unbedingt angeben.'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-4
+            label: 'Straße und Hausnr'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221551320
+                  message: 'Bitte geben Sie eine Straße und Hausnummer ein.'
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: Alphanumeric
+          -
+            defaultValue: ''
+            properties:
+              fluidAdditionalAttributes:
+                step: 1
+                required: required
+                min: '1000'
+                max: '9999'
+              validationErrorMessages:
+                -
+                  code: 1221563685
+                  message: 'Bitte gültige PLZ eingeben.'
+                -
+                  code: 1221561046
+                  message: 'Bitte gültige PLZ eingeben.'
+            type: Number
+            identifier: number-2
+            label: PLZ
+            validators:
+              -
+                identifier: Number
+              -
+                identifier: NotEmpty
+              -
+                options:
+                  minimum: '1000'
+                  maximum: '9999'
+                identifier: NumberRange
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-5
+            label: Ort
+            properties:
+              fluidAdditionalAttributes:
+                minlength: '2'
+                maxlength: '60'
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1238110957
+                  message: 'Bitte Wohnort angeben.'
+                -
+                  code: 1269883975
+                  message: 'Bitte Wohnort angeben.'
+                -
+                  code: 1428504122
+                  message: 'Bitte Wohnort angeben.'
+                -
+                  code: 1238108068
+                  message: 'Bitte Wohnort angeben.'
+                -
+                  code: 1238108069
+                  message: 'Bitte Wohnort angeben.'
+            validators:
+              -
+                options:
+                  minimum: '2'
+                  maximum: '60'
+                identifier: StringLength
+              -
+                identifier: NotEmpty
+      -
+        type: Fieldset
+        identifier: fieldset-3
+        label: 'Weitere Informationen'
+        renderables:
+          -
+            defaultValue: ''
+            type: Textarea
+            identifier: textarea-1
+            label: Nachricht
+            properties:
+              elementDescription: ''
+              fluidAdditionalAttributes:
+                placeholder: 'Möchten Sie uns sonst noch etwas mitteilen?'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-3
+            label: Terminvorschläge
+            properties:
+              elementDescription: ''
+              fluidAdditionalAttributes:
+                placeholder: 'z.B. Dienstag Nachmittage'
+  -
+    renderingOptions:
+      previousButtonLabel: 'Vorherige Seite'
+      nextButtonLabel: 'Nächster Schritt'
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Zusammenfassung

@@ -1,0 +1,3 @@
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Menu/Menu.top.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Menu/Menu.folder.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Menu/Menu.sub.typoscript'

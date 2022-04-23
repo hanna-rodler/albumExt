@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+
+
+<f:section name="content">
+    <f:debug>{albums}</f:debug>
+    <h1>Single View for Album</h1>
+
+    <f:flashMessages/>
+    <f:render partial="Album/Properties" arguments="{album:album}"/>
+    <f:if condition="{settings.hotel.listPage}">
+        <f:link.page pageUid="{settings.hotel.listPage">
+            <f:translate key="backlinkLabel"/>
+        </f:link.page>
+    </f:if>
+    <f:link.action action="list">Back to list</f:link.action>
+    <br/>
+    <f:link.action action="new">New Album</f:link.action>
+</f:section>
+</html>

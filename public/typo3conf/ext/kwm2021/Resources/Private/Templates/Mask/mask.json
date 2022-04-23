@@ -1,0 +1,75 @@
+{
+    "tt_content": {
+        "elements": {
+            "kwm2021statements": {
+                "key": "kwm2021statements",
+                "label": "KWM2021Statements",
+                "description": "",
+                "shortLabel": "",
+                "color": "#000000",
+                "icon": "fa-keyboard-o",
+                "columns": [
+                    "tx_mask_student",
+                    "tx_mask_comment",
+                    "tx_mask_icon"
+                ],
+                "labels": [
+                    "Student",
+                    "Kommentar",
+                    "Icon"
+                ],
+                "descriptions": [
+                    "",
+                    "",
+                    ""
+                ],
+                "sorting": 0
+            }
+        },
+        "sql": {
+            "tx_mask_comment": {
+                "tt_content": {
+                    "tx_mask_comment": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_icon": {
+                "tt_content": {
+                    "tx_mask_icon": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_student": {
+                "tt_content": {
+                    "tx_mask_student": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_comment": {
+                "config": {
+                    "type": "input"
+                },
+                "type": "string",
+                "key": "comment",
+                "fullKey": "tx_mask_comment"
+            },
+            "tx_mask_icon": {
+                "config": {
+                    "type": "input"
+                },
+                "type": "string",
+                "key": "icon",
+                "fullKey": "tx_mask_icon"
+            },
+            "tx_mask_student": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "type": "string",
+                "key": "student",
+                "fullKey": "tx_mask_student"
+            }
+        },
+        "palettes": []
+    }
+}

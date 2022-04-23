@@ -1,0 +1,95 @@
+{
+    "sys_file_reference": {
+        "elements": [],
+        "sql": {
+            "tx_mask_resourceimg": {
+                "sys_file_reference": {
+                    "tx_mask_resourceimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": [],
+        "palettes": []
+    },
+    "tt_content": {
+        "elements": {
+            "downloadpreview": {
+                "key": "downloadpreview",
+                "label": "DownloadPreview",
+                "description": "",
+                "shortLabel": "",
+                "color": "#606ebd",
+                "icon": "fa-download",
+                "columns": [
+                    "tx_mask_resource",
+                    "tx_mask_resourceimg",
+                    "tx_mask_desc"
+                ],
+                "labels": [
+                    "Ueberschrift",
+                    "Bild",
+                    "Beschreibung"
+                ],
+                "descriptions": [
+                    "",
+                    "",
+                    ""
+                ],
+                "sorting": 1
+            }
+        },
+        "sql": {
+            "tx_mask_desc": {
+                "tt_content": {
+                    "tx_mask_desc": "mediumtext"
+                }
+            },
+            "tx_mask_resource": {
+                "tt_content": {
+                    "tx_mask_resource": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_resourceimg": {
+                "tt_content": {
+                    "tx_mask_resourceimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_desc": {
+                "config": {
+                    "cols": "50",
+                    "eval": "required",
+                    "type": "text",
+                    "wrap": "virtual"
+                },
+                "key": "desc",
+                "fullKey": "tx_mask_desc",
+                "type": "text"
+            },
+            "tx_mask_resource": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "key": "resource",
+                "fullKey": "tx_mask_resource",
+                "type": "string"
+            },
+            "tx_mask_resourceimg": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "type": "inline"
+                },
+                "key": "resourceimg",
+                "fullKey": "tx_mask_resourceimg",
+                "type": "file",
+                "imageoverlayPalette": 0
+            }
+        },
+        "palettes": []
+    }
+}

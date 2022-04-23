@@ -1,0 +1,18 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          10: EXT:rodler_kinderordi/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                translation:
+                  translationFiles:
+                    20: 'EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf'
+                templateRootPaths:
+                  20: 'EXT:rodler_kinderordi/Resources/Private/Templates/Form/'

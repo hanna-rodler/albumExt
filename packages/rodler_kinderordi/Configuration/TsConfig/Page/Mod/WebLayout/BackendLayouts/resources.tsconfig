@@ -1,0 +1,30 @@
+mod.web_layout.BackendLayouts {
+    resources {
+        title = Ressourcen
+        icon = EXT:rodler_kinderordi/Resources/Public/Images/BackendLayouts/default.png
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Login
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Beschreibung von Resourcen
+                                colPos = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:albums/Resources/Private/Language/locallang_csh_tx_albums_domain_model_genre.xlf" date="2022-04-23T09:14:44Z" product-name="albums">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

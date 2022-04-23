@@ -1,0 +1,6 @@
+menu.top = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+
+menu.top {
+    levels = 1
+    as = mainnav
+}

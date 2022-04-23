@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<div class="row">
+    <h2><f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:openingH"/></h2>
+    <f:if condition="{data.tx_mask_open}">
+        <f:for each="{data.tx_mask_open}" as="data_item">
+            <div class="col-4">
+                <f:if condition="{data_item.tx_mask_day}">
+                    {data_item.tx_mask_day}
+                </f:if>
+            </div>
+            <div class="col-8">
+                <f:if condition="{data_item.tx_mask_hours}">
+                    {data_item.tx_mask_hours}
+                </f:if>
+            </div>
+        </f:for>
+    </f:if>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+mod.web_layout.BackendLayouts {
+    index {
+        title = 2 Reihen
+        icon = EXT:rodler_kinderordi/Resources/Public/Images/BackendLayouts/default.png
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Allgemeines
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Inhalt
+                                colPos = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

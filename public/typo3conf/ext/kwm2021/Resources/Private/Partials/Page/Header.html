@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<!-- Header -->
+<header id="header">
+   <a href="index.html" class="logo"><strong>KWM</strong> - Kommunikation, Wissen, Medien</a>
+   <ul class="icons">
+      <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+   </ul>
+</header>
+
+<f:if condition="{breadcrumbs}">
+   <!-- Iterator Property lässt anders verhalten  -->
+   <f:for each="{breadcrumbs}" as="bc" iteration="bcIterator">
+      <f:if condition="{bcIterator.isLast}">
+         <!-- letzter Menüpunkt nicht verlinkt-->
+         <f:then>
+            {bc.title}
+         </f:then>
+         <f:else>
+            <a href="{bc.link}">{bc.title}</a>
+         </f:else>
+      </f:if>
+   </f:for>
+</f:if>

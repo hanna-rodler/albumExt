@@ -1,0 +1,44 @@
+mod.web_layout.BackendLayouts {
+    practice {
+        title = Practice
+        icon = EXT:rodler_kinderordi/Resources/Public/Images/BackendLayouts/default.png
+        config {
+            backend_layout {
+                colCount = 2
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Allgemeine Infos
+                                rowspan = 2
+                                colPos = 1
+                            }
+                            2 {
+                                name = Kontakt
+                                colPos = 2
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Oeffnungszeiten
+                                colPos = 3
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Bildergalerie / Formular
+                                colspan = 2
+                                colPos = 4
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

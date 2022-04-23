@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<div class="row">
+    <f:if condition="{data.tx_mask_header}">
+        <h2>{data.tx_mask_header}</h2>
+    </f:if>
+</div>
+
+<f:if condition="{data.tx_mask_employees}">
+    <div class="row justify-content-sm-center">
+        <f:for each="{data.tx_mask_employees}" as="data_item">
+            <div class="col-md-4 text-center">
+                <f:if condition="{data_item.tx_mask_employeeimg}">
+                    <f:for each="{data_item.tx_mask_employeeimg}" as="file">
+                        <f:image class="img-fluid" image="{file}"/>
+                        {file.description}
+                    </f:for>
+                </f:if>
+                <f:if condition="{data_item.tx_mask_name}">
+                  <h4>{data_item.tx_mask_name}</h4>
+                </f:if>
+                <f:if condition="{data_item.tx_mask_descrip}">
+                    <p>{data_item.tx_mask_descrip}</p>
+                </f:if>
+            </div>
+        </f:for>
+    </div>
+</f:if>

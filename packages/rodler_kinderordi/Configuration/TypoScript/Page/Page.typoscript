@@ -1,0 +1,130 @@
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:rodler_kinderordi/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:rodler_kinderordi/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:rodler_kinderordi/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:rodler_kinderordi/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 2
+                includeSpacer = 1
+                as = mainnavigation
+            }
+            # data processor for menu top (mainnavigation)
+            30 < menu.top
+            40 < menu.folder
+            50 < lang.switch
+            60 < menu.sub
+        }
+    }
+
+
+
+    includeCSSLibs {
+        rodler_kinderordi_layout = EXT:rodler_kinderordi/Resources/Public/Css/bootstrap.min.css
+    }
+
+    includeCSS {
+        5=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css
+        rodler_kinderordi_layout = EXT:rodler_kinderordi/Resources/Public/Css/main.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+    }
+
+    includeJSFooterlibs {
+        6 = EXT:rodler_kinderordi/Resources/Public/JavaScript/Dist/bootstrap.bundle.min.js
+        rodler_kinderordi_scripts = https://code.jquery.com/jquery-3.2.1.min.js
+    }
+
+    includeJSFooter {
+        rodler_kinderordi_scripts =  EXT:rodler_kinderordi/Resources/Public/JavaScript/Dist/main.js
+    }
+}
+
+# login form record
+lib.loginform = RECORDS
+lib.loginform {
+    source.data = current:1
+    source.intval = 1
+    tables = tt_content
+}
+
+lib.currentPageId = TEXT
+lib.currentPageId.data = TSFE:id
+
+
+plugin.tx_felogin_login {
+    view {
+        templateRootPaths {
+            10 = EXT:rodler_kinderordi/Resources/Private/Templates/Felogin/
+        }
+    }
+}
+
+plugin.tx_form {
+    view {
+        templateRootPaths {
+            10 = EXT:rodler_kinderordi/Resources/Private/Templates/Form/
+        }
+        partialRootPaths {
+            10 = EXT:rodler_kinderordi/Resources/Private/Partials/Form/
+        }
+    }
+}
+
+
+
+

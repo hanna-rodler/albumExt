@@ -1,0 +1,19 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        layout.addItems.10=---------------
+        layout.addItems.11 = text_right
+        layout.addItems.12 = text_left
+        layout.addItems.13 = headerImg
+        layout.addItems.14 = imageGallery
+        layout.addItems.15 = Big_Heading
+        layout.addItems.16 = Small_Heading
+        layout.addItems.17 = Login_Form
+        layout.addItems.18 = Login_Form2
+    }
+}

@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="http://kinderordi-rodler.s2010456026.student.kwmhgb.at" class="navbar-brand">
+        <f:link.page pageUid="15">
+            <f:image class="img-fluid" id="logo" src="EXT:rodler_kinderordi/Resources/Public/Images/DrRodler-logo.png"
+                     alt="Logo Dr. Rodler" height="50rem"/>
+        </f:link.page>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <f:for each="{mainnav}" as="menuItem">
+                <li class="nav-item">
+                    <f:if condition="{menuItem.active}">
+                        <f:then>
+                            <a href="{menuItem.link}" class="nav-link active"
+                               aria-current="page">{menuItem.title}</a>
+                        </f:then>
+                        <f:else>
+                            <a href="{menuItem.link}" class="nav-link">{menuItem.title}</a>
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:for>
+
+            <li class="divider nav-item"></li>
+            <f:if condition="{langNav}">
+                <f:for each="{langNav}" as="item">
+                    <li class="nav-item nav-link {f:if(condition: item.active, then: 'active')}{f:if(condition: item.available, else: ' text-muted')}">
+                        <f:if condition="{item.available}">
+                            <f:then>
+                                <a href="{item.link}" hreflang="{item.hreflang}" class="lang" title="{item.navigationTitle}">
+                                    {item.navigationTitle}
+                                </a>
+                            </f:then>
+                            <f:else>
+                                {item.navigationTitle}
+                            </f:else>
+                        </f:if>
+                    </li>
+                </f:for>
+            </f:if>
+        </ul>
+    </div>
+</nav>
+
+<f:comment>
+    <f:cObject typoscriptObjectPath="lib.loginform">
+
+    </f:cObject>
+</f:comment>

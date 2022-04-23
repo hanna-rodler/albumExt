@@ -1,0 +1,5 @@
+lang.switch = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+lang.switch{
+    languages = auto
+    as = languageNavigation
+}

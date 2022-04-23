@@ -1,0 +1,3 @@
+@import 'EXT:kwm2021/Configuration/TypoScript/Menu/Menu.top.typoscript'
+@import 'EXT:kwm2021/Configuration/TypoScript/Menu/Menu.breadcrumbs.typoscript'
+@import 'EXT:kwm2021/Configuration/TypoScript/Menu/Menu.folder.typoscript'

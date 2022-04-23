@@ -1,0 +1,38 @@
+mod.web_layout.BackendLayouts {
+    kwmhome {
+        title = KWM Home
+        icon = EXT:kwm2021/Resources/Public/Images/BackendLayouts/default.png
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Banner
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Statements
+                                colPos = 1
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = News
+                                colPos = 2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

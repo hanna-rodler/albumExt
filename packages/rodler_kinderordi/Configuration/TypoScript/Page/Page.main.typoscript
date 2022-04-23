@@ -1,0 +1,3 @@
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Page/Page.config.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Page/Page.meta.typoscript'
+@import 'EXT:rodler_kinderordi/Configuration/TypoScript/Page/Page.typoscript'

@@ -1,0 +1,7 @@
+menu.top = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+
+# Wie viele Ebenen soll rendern?
+menu.top {
+    levels = 2
+    as = mainnavigation
+}

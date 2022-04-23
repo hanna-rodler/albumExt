@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<ul>
+    <f:for each="{subnav}" as="menuItem">
+        <f:if condition="{menuItem.children}">
+            <f:then>
+                <f:render section="submenu" arguments="{title:
+menuItem.title, submenu: menuItem.children}"/>
+            </f:then>
+            <f:comment>
+                <f:else>
+                    <li><a
+                            href="{menuItem.link}">{menuItem.title}</a></li>
+                </f:else>
+            </f:comment>
+        </f:if>
+
+    </f:for>
+</ul>
+
+<f:section name="submenu">
+    <div class="d-flex justify-content-center">
+        <div class="btn-group d-block">
+            <f:for each="{submenu}" as="subItem">
+                <f:if condition="{subItem.active}">
+                    <f:then>
+                        <a href="{subItem.link}" class="btn btn-primary subActive" aria-current="page">{subItem.title}</a>
+
+                    </f:then>
+                    <f:else>
+                        <a href="{subItem.link}" class="btn btn-primary">{subItem.title}</a>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</f:section>

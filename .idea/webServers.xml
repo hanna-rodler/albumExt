@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1fafeef6-9cae-4377-a159-0df2f81d7f30" name="CMS-21" url="http://cms21.s2010456026.student.kwmhgb.at">
+        <fileTransfer rootFolder="/usr/home/sstudv9k/public_html/cms21/" accessType="SFTP" host="kwmhgb.at" port="222" sshConfigId="c43b358f-2af5-4bfc-9a63-d267530f8204" sshConfig="sstudv9k@kwmhgb.at:222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

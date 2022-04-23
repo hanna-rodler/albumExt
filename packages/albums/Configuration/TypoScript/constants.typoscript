@@ -1,0 +1,84 @@
+plugin.tx_albums_default {
+    view {
+        # cat=plugin.tx_albums_default/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_default/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_default/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_default//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_songs {
+    view {
+        # cat=plugin.tx_albums_songs/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_songs/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_songs/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_songs//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_interpreters {
+    view {
+        # cat=plugin.tx_albums_interpreters/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_interpreters/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_interpreters/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_interpreters//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_funk {
+    view {
+        # cat=plugin.tx_albums_funk/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_funk/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_funk/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_funk//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_worship {
+    view {
+        # cat=plugin.tx_albums_worship/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_worship/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_worship/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_worship//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_availableeverywhere {
+    view {
+        # cat=plugin.tx_albums_availableeverywhere/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_availableeverywhere/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_availableeverywhere/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_availableeverywhere//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

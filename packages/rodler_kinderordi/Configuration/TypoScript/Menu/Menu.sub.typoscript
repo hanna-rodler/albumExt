@@ -1,0 +1,6 @@
+menu.sub = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+
+menu.sub {
+    levels = 2
+    as = subnav
+}

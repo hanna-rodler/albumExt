@@ -1,0 +1,13 @@
+menu.breadcrumb = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+
+# Wie viele Ebenen soll rendern?
+menu.breadcrumb {
+    special = rootline
+    # 1|-1 → von erster Ebene ausgehen (Root Knoten) | letzte Seite ist mit -1 letzte Seite (Doku)
+    special.range = 1|-1
+    # Seiten im Backend aus Menü ausblenden unter Page > Behavior möglich. (Page enabled in menus) →
+    # in Standard-Menü nicht sichtbar, aber abrufbar. Hier kann man mit includeNotInMenu = 1, die Seite
+    # trotzdem anzeigen lassen.
+    includeNotInMenu = 1
+    as = breadcrumbs
+}

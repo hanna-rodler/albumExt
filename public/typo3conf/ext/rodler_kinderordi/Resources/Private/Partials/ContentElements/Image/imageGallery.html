@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns="http://www.w3.org/1999/html"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{files}">
+    <div class="row my-3">
+        <f:for each="{files}" as="img" iteration="imgIterator">
+            <div class="col-lg-4 col-md-6 my-3">
+                <figure class="img">
+                    <f:image class="img-fluid thN" id="img_{imgIterator.index}" image="{img}" title="{img.description}" alt="{img.alt}"/>
+                    <f:if condition="{img.description}">
+                        <figcaption class="image-caption mt-2">
+                            {img.description -> f:format.nl2br()}
+                        </figcaption>
+                    </f:if>
+                </figure>
+            </div>
+        </f:for>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="cust-modal">
+        <span class="cust-close cursor">&times;</span>
+        <div class="cust-modal-content">
+            <f:for each="{files}" as="img" iteration="imgIterator">
+                <div class="mySlides">
+                    <div class="numbertext">{imgIterator.index +1} /
+                        <f:count subject="{files}"/>
+                    </div>
+                    <f:image class="img" image="{img}" alt="{img.description}"/>
+                </div>
+            </f:for>
+
+            <!-- Next/previous controls -->
+            <a class="cust-prev">&#10094;</a>
+            <a class="cust-next">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <f:for each="{files}" as="img" iteration="imgIterator">
+                <div class="cust-column">
+                    <f:image class="demo img" id="timg_{imgIterator.index}" image="{img}" title="{img.description}" alt="{img.alt}"/>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:if>

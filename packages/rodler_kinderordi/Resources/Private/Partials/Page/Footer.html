@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<footer class="footer mt-2">
+    <div class="container-xl d-flex">
+        <div class="row container-xl d-flex justify-content-md-between">
+            <div class="col-lg-2 col-sm-4 align-self-center order-lg-1 order-3 my-3">
+                <div>
+                    <u>
+                        <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:contact"/>
+                    </u>
+                    <div>Hellndorferweg 25<br>4040 Linz</div>
+                    <div>+43 732 436433</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 align-self-center order-lg-2 order-5 my-3">
+                <div class="row justify-content-md-end">
+                    <div class="row justify-content-end">
+                        <u>
+                            <f:translate
+                                    key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:openingH"/>
+                        </u>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:day1"/>
+                            <br>
+                            <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:day2"/>
+                            <br>
+                            <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:day3"/>
+                        </div>
+                        <div class="col">07:00 - 15:00
+                            <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:time"/>
+                            <br>12:30 - 20:00
+                            <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:time"/>
+                            <br>08:00 - 18:00
+                            <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:time"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="to-top col-lg-2 col-sm-4 align-self-center order-lg-3 order-1 my-3">
+                <div class="text-center">
+                    <i class="fa fa-angle-double-up"></i>
+                    <p>
+                        <f:translate key="LLL:EXT:rodler_kinderordi/Resources/Private/Language/locallang.xlf:toTop"/>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-8 align-self-center order-lg-4 order-2 my-3">
+                <f:comment><f:if condition="{langNav}">
+                    <f:for each="{langNav}" as="item">
+                        <f:if condition="{item.title} == 'De'">
+                            <p>{item.title}</p>
+                            <f:then>
+                                <f:cObject typoscriptObjectPath="lib.loginform">81</f:cObject>
+                            </f:then>
+                            <f:else>
+                                <f:cObject typoscriptObjectPath="lib.loginform">117</f:cObject>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </f:if></f:comment>
+                <f:cObject typoscriptObjectPath="lib.loginform">117</f:cObject>
+            </div>
+            <div class="col-lg-1 col-sm-2 align-self-center order-last">
+                <f:if condition="{folderMenu}">
+                    <f:for each="{folderMenu}" as="menuItem">
+                        <div class="row-cols-auto">
+                            <a href="{menuItem.link}">{menuItem.title}</a>
+                        </div>
+                    </f:for>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</footer>

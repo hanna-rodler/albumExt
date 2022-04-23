@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<section class="ressource my-4">
+   <f:if condition="{data.tx_mask_resource}">
+      <div class="row">
+         <h4>{data.tx_mask_resource}</h4>
+      </div>
+   </f:if>
+   <div class="row">
+      <div class="col-lg-2 col-sm-4 order-lg-first my-md-auto my-2">
+         <f:if condition="{data.tx_mask_resourceimg}">
+            <f:for each="{data.tx_mask_resourceimg}" as="file">
+               <f:image class="img-fluid" image="{file}" width="200"/>
+               {file.description}
+            </f:for>
+         </f:if>
+      </div>
+      <div class="col-lg-8 col-sm-12 order-lg-2 order-sm-last">
+         <f:if condition="{data.tx_mask_desc}">
+            {data.tx_mask_desc -> f:format.nl2br()}
+         </f:if>
+      </div>
+      <div class="col-lg-2 col-sm-8 order-lg-last order-sm-2 d-flex align-items-center align-content-center justify-content-center my-sm-auto my-3">
+         <f:if condition="{data.tx_mask_pdf}">
+            <a href="{data.tx_mask_pdf.0.publicUrl}" download><div class="fa fa-download"></div></a>
+         </f:if>
+      </div>
+   </div>
+</section>

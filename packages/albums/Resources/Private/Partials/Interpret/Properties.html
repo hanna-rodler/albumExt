@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-albums">
+	<tr>
+		<td><f:translate key="tx_albums_domain_model_interpret.name" /></td>
+		<td>{interpret.name}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_albums_domain_model_interpret.biography" /></td>
+		<td>{interpret.biography}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_albums_domain_model_interpret.gallery" /></td>
+		<td>
+				<f:image src="{interpret.gallery.originalResource.publicUrl}" width="200"/>
+            </td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_albums_domain_model_interpret.birthdate" /></td>
+		<td>{interpret.birthdate -> f:format.date()}</td>
+	</tr>
+</table>
+</html>

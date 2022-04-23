@@ -1,0 +1,12 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        layout.addItems.10 = -----------------
+        layout.addItems.11 = KWMBanner
+    }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:albums/Resources/Private/Language/locallang_csh_tx_albums_domain_model_album.xlf" date="2022-04-23T09:14:44Z" product-name="albums">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="media.description" resname="media.description">
+				<source>media</source>
+			</trans-unit>
+			<trans-unit id="teaser.description" resname="teaser.description">
+				<source>teaser</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="release_date.description" resname="release_date.description">
+				<source>releaseDate</source>
+			</trans-unit>
+			<trans-unit id="spotify_available.description" resname="spotify_available.description">
+				<source>spotifyAvailable</source>
+			</trans-unit>
+			<trans-unit id="apple_music_available.description" resname="apple_music_available.description">
+				<source>appleMusicAvailable</source>
+			</trans-unit>
+			<trans-unit id="songs.description" resname="songs.description">
+				<source>songs</source>
+			</trans-unit>
+			<trans-unit id="ratings.description" resname="ratings.description">
+				<source>ratings</source>
+			</trans-unit>
+			<trans-unit id="genres.description" resname="genres.description">
+				<source>genres</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

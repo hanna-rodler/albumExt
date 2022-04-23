@@ -1,0 +1,4 @@
+# Extension importieren. Wo sind TypoScript configs?
+@import 'EXT:kwm2021/Configuration/TypoScript/Page/Page.config.typoscript'
+@import 'EXT:kwm2021/Configuration/TypoScript/Page/Page.meta.typoscript'
+@import 'EXT:kwm2021/Configuration/TypoScript/Page/Page.typoscript'

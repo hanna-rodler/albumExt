@@ -1,0 +1,46 @@
+mod.web_layout.BackendLayouts {
+    resourcesLoggedIn {
+        title = Ressourcen Eingelogt
+        icon = EXT:rodler_kinderordi/Resources/Public/Images/BackendLayouts/default.png
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 4
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Ressourcen Eltern
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Downloads Eltern
+                                colPos = 1
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Ressourcen Kinder
+                                colPos = 2
+                            }
+                        }
+                    }
+                    4 {
+                        columns {
+                            1 {
+                                name = Downloads Kinder
+                                colPos = 3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
