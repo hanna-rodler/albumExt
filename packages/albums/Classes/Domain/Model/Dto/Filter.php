@@ -9,6 +9,7 @@ class Filter{
   protected bool $spotifyAvailable = false;
   protected bool $appleMusicAvailable = false;
   
+  
   /**
    * @return bool
    */

@@ -88,7 +88,12 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function funkAction()
     {
+      $filter=$this->getFunkFilter();
+    }
     
+    protected function getFunkFilter(){
+      $filter = new Filter();
+      
     }
 
     /**
