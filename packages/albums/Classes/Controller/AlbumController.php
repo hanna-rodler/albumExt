@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace HannaRodler\Albums\Controller;
 
 use HannaRodler\Albums\Domain\Model\Dto\Filter;
+use HannaRodler\Albums\Domain\Model\Genre;
+use HannaRodler\Albums\Domain\Repository\GenreRepository;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
@@ -35,6 +37,21 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function injectAlbumRepository(\HannaRodler\Albums\Domain\Repository\AlbumRepository $albumRepository)
     {
         $this->albumRepository = $albumRepository;
+    }
+  
+  /**
+   * @var null
+   */
+    protected ?GenreRepository $genreRepository = null;
+  
+  /**
+   * @param GenreRepository $genreRepository
+   *
+   * @return \HannaRodler\Albums\Domain\Repository\GenreRepository
+   * $genreRepository
+   */
+    public function injectGenreRepository(GenreRepository $genreRepository){
+      $this->genreRepository = $genreRepository;
     }
 
     /**
@@ -88,11 +105,26 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function funkAction()
     {
-      $filter=$this->getFunkFilter();
+      $filter = new Filter();
+      $filter->setGenres("Funk");
+      $albums = $this->genreRepository->findByFilter($filter);
+      $this->view->assign('albums', $albums);
+      
+      /*$filter= new Filter();
+      $filter->setGenres(['funk']);
+      $funk=$this->albumRepository->findByFilter($filter);
+      $this->view->assign('albums',$funk);*/
     }
     
     protected function getFunkFilter(){
-      $filter = new Filter();
+      $filter= new Filter();
+      $filter->setGenres('Funk');
+      var_dump($filter);
+      return $filter;
+      
+      /*$funkFilter = new Filter();
+      $genres = $this->albumRepository->findByFilter($funkFilter);
+      return $genres;*/
       
     }
 

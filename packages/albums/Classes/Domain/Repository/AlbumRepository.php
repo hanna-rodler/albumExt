@@ -34,6 +34,10 @@ class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     if($filter->isAppleMusicAvailable()){
       $constraints[]=$query->equals('appleMusicAvailable', true);
     }
+  
+    if($filter->getGenres()){
+      $constraints[]=$query->equals('genres', $filter->getGenres());
+    }
     
     if(!empty($constraints)){
       $query->matching($query->logicalAnd($constraints));
@@ -41,4 +45,6 @@ class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     
     return $query->execute();
   }
+  
+  
 }

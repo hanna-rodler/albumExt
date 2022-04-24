@@ -28,7 +28,10 @@ class GenreRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     if($filter->getGenres()){
       $constraints[]=$query->equals('genres', $filter->getGenres());
     }
-    
+  
+    if(!empty($constraints)){
+      $query->matching($query->logicalAnd($constraints));
+    }
     
     return $query->execute();
   }
