@@ -18,6 +18,23 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
     <f:flashMessages/>
     <div class="albumOverview">
+        <div class="filterbar">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <form class="d-flex mb-2">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <div class="justify-content-end my-sm-0 my-3">
+                        <button type="button" class="btn btn-outline-dark">explicit</button>
+                        <button type="button" class="btn btn-outline-dark">Spotify</button>
+                        <button type="button" class="btn btn-outline-dark">Apple Music</button>
+                        <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">veröffentlicht</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
         <div class="card-group d-grid">
             <div class="row">
                 <f:for each="{albums}" as="album">
