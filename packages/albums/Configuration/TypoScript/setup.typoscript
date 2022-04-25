@@ -17,6 +17,11 @@ plugin.tx_albums_songs{
         filter {
             explicitContent = 1
         }
+
+        songs {
+            detailPage = 80
+            listPage = 72
+        }
     }
 }
 
