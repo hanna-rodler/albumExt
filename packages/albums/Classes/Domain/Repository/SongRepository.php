@@ -29,12 +29,17 @@ class SongRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query = $this->createQuery();
         $query->getQuerySettings()->setRespectStoragePage(false);
         $constraints = [];
-        if ($filter->isSpotifyAvailable()) {
+        /*if ($filter->isSpotifyAvailable()) {
             $constraints[] = $query->equals('spotifyAvailable', true);
         }
         if ($filter->isAppleMusicAvailable()) {
             $constraints[] = $query->equals('appleMusicAvailable', true);
+        }*/
+        
+        if($filter->isExplicit()){
+          $constraints[]=$query->equals('explicitContent', true);
         }
+        
         if (!empty($constraints)) {
             $query->matching($query->logicalAnd($constraints));
         }

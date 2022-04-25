@@ -58,4 +58,24 @@ class SongController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $this->view->assign('song', $song);
     }
+
+    /**
+     * action explicit
+     *
+     * @return string|object|null|void
+     */
+    public function explicitAction()
+    {
+      $filter = $this->getFilter();
+      $explSongs = $this->songRepository->findByFilter($filter);
+      $this->view->assign('songs', $explSongs);
+    }
+  
+  protected function getFilter()
+  {
+    $filter = new Filter();
+    $filter->setIsExplicit((bool) ($this->settings['filter']['explicitContent'] ??
+      true));
+    return $filter;
+  }
 }
