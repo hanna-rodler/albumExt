@@ -20,27 +20,29 @@ use HannaRodler\Albums\Domain\Model\Dto\Filter;
  */
 class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-
-    /**
-     * @param Filter $filter
-     */
-    public function findByFilter(Filter $filter)
-    {
-        $query = $this->createQuery();
-        $query->getQuerySettings()->setRespectStoragePage(false);
-        $constraints = [];
-        if ($filter->isSpotifyAvailable()) {
-            $constraints[] = $query->equals('spotifyAvailable', true);
-        }
-        if ($filter->isAppleMusicAvailable()) {
-            $constraints[] = $query->equals('appleMusicAvailable', true);
-        }
-        if ($filter->getGenres()) {
-            $constraints[] = $query->equals('genres', $filter->getGenres());
-        }
-        if (!empty($constraints)) {
-            $query->matching($query->logicalAnd($constraints));
-        }
-        return $query->execute();
+  
+  /**
+   * @param Filter $filter
+   */
+  public function findByFilter(Filter $filter){
+    $query=$this->createQuery();
+    $query->getQuerySettings()->setRespectStoragePage(false);
+    $constraints=[];
+    if($filter->isSpotifyAvailable()){
+      $constraints[]=$query->equals('spotifyAvailable', true);
     }
+    if($filter->isAppleMusicAvailable()){
+      $constraints[]=$query->equals('appleMusicAvailable', true);
+    }
+    if($filter->getGenres()){
+      $constraints[]=$query->equals('genres.name', $filter->getGenres());
+    }
+    if($filter->getReleaseDate()){
+      $constraints[]=$query->lessThanOrEqual('releaseDate', $filter->getReleaseDate());
+    }
+    if(!empty($constraints)){
+      $query->matching($query->logicalAnd($constraints));
+    }
+    return $query->execute();
+  }
 }

@@ -12,6 +12,8 @@ class Filter{
   protected bool $appleMusicAvailable = false;
   protected string $genre = "";
   protected bool $isExplicit = false;
+  protected bool $released = false;
+  protected $releaseDate = null;
   
   /**
    * @return string
@@ -69,6 +71,34 @@ class Filter{
    */
   public function setIsExplicit(bool $isExplicit): void{
     $this->isExplicit=$isExplicit;
+  }
+  
+  /**
+   * @return bool
+   */
+  public function isReleased(): bool{
+    return $this->released;
+  }
+  
+  /**
+   * @param bool $released
+   */
+  public function setReleased(bool $released): void{
+    $this->released=$released;
+  }
+  
+  /**
+   * @return null
+   */
+  public function getReleaseDate(){
+    return $this->releaseDate;
+  }
+  
+  /**
+   * @param null $releaseDate
+   */
+  public function setReleaseDate($releaseDate): void{
+    $this->releaseDate=$releaseDate;
   }
   
   

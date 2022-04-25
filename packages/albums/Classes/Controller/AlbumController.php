@@ -102,9 +102,9 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function funkAction()
     {
-        $filter = new Filter();
-        $filter->setGenres("Funk");
-        $albums = $this->genreRepository->findByFilter($filter);
+        $filter=$this->getGenreFilter("Funk");
+        $albums = $this->albumRepository->findByFilter($filter);
+//        $albums = $this->genreRepository->findByFilter($filter);
         $this->view->assign('albums', $albums);
 
         /*$filter= new Filter();
@@ -112,11 +112,10 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
           $funk=$this->albumRepository->findByFilter($filter);
           $this->view->assign('albums',$funk);*/
     }
-    protected function getFunkFilter()
+    protected function getGenreFilter($genreName)
     {
         $filter = new Filter();
-        $filter->setGenres('Funk');
-        var_dump($filter);
+        $filter->setGenres($genreName);
         return $filter;
 
         /*$funkFilter = new Filter();
@@ -131,6 +130,9 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function worshipAction()
     {
+      $filter = $this->getGenreFilter("Worship");
+      $albums = $this->albumRepository->findByFilter($filter);
+      $this->view->assign('albums', $albums);
     }
 
     /**
@@ -140,6 +142,17 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function releasedAction()
     {
+      $filter=$this->getReleasedFilter();
+      $albums = $this->albumRepository->findByFilter($filter);
+      $this->view->assign('albums', $albums);
+    }
+    
+    protected function getReleasedFilter(){
+      $filter = new Filter();
+      $date = \DateTime::createFromFormat('Y-m-d', '25-04-2022');
+      $timestamp = $date->getTimestamp();
+      $filter->setReleaseDate($timestamp);
+      return $filter;
     }
 
     /**
