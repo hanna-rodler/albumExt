@@ -26,7 +26,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
     </tr>
     <f:for each="{songs}" as="song">
       <tr>
-        <td><f:link.action action="show" arguments="{song : song}">{song.name}</f:link.action></td>
+        <td><f:link.action pageUid="{settings.songs.detailPage}" pluginName="songs" action="show"
+                           arguments="{song : song}">{song.name}
+        </f:link.action></td>
+<!--        <td><f:link.action action="show" arguments="{song : song}">{song.name}</f:link.action></td>-->
         <td><f:link.action action="show" arguments="{song : song}">{song.duration}</f:link.action></td>
         <td><f:link.action action="show" arguments="{song : song}">{song.explicitContent}</f:link.action></td>
       </tr>
