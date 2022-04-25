@@ -36,3 +36,33 @@ defined('TYPO3_MODE') || die();
     'Worship',
     'Worship Albums'
 );
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Albums',
+    'Explicit',
+    'Explicit Songs'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Albums',
+    'Released',
+    'released Albums'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Albums',
+    'Albumsperinterpreter',
+    'Albums per Interpret'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Albums',
+    'Funkgenre',
+    'Funk Genre'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Albums',
+    'Worshipgenre',
+    'Worship Albums'
+);
