@@ -11,6 +11,7 @@ class Filter{
   protected bool $spotifyAvailable = false;
   protected bool $appleMusicAvailable = false;
   protected string $genre = "";
+  protected bool $isExplicit = false;
   
   /**
    * @return string
@@ -56,7 +57,19 @@ class Filter{
     $this->appleMusicAvailable=$appleMusicAvailable;
   }
   
+  /**
+   * @return bool
+   */
+  public function isExplicit(): bool{
+    return $this->isExplicit;
+  }
   
+  /**
+   * @param bool $isExplicit
+   */
+  public function setIsExplicit(bool $isExplicit): void{
+    $this->isExplicit=$isExplicit;
+  }
   
   
 }

@@ -44,7 +44,7 @@ class GenreControllerTest extends UnitTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $genreRepository = $this->getMockBuilder(\::class)
+        $genreRepository = $this->getMockBuilder(\HannaRodler\Albums\Domain\Repository\GenreRepository::class)
             ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();

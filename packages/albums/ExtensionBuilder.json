@@ -17,9 +17,11 @@
                     "_default4_edit_update": false,
                     "_default5_delete": false,
                     "customActions": [
-                        "funk",
                         "availableeverywhere",
-                        "worship"
+                        "funk",
+                        "worship",
+                        "released",
+                        "albumsPerInterpreter"
                     ]
                 },
                 "name": "Album",
@@ -179,7 +181,9 @@
                     "_default3_new_create": false,
                     "_default4_edit_update": false,
                     "_default5_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "explicit"
+                    ]
                 },
                 "name": "Song",
                 "objectsettings": {
@@ -470,14 +474,17 @@
                     "_default3_new_create": false,
                     "_default4_edit_update": false,
                     "_default5_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "funkGenre",
+                        "worshipGenre"
+                    ]
                 },
                 "name": "Genre",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
+                    "aggregateRoot": true,
                     "categorizable": false,
                     "description": "",
                     "mapToTable": "",
@@ -641,7 +648,7 @@
             },
             {
                 "actions": {
-                    "controllerActionCombinations": "Album => list,show",
+                    "controllerActionCombinations": "Album => availableeverywhere,show",
                     "noncacheableActions": ""
                 },
                 "description": "",
@@ -655,6 +662,51 @@
                 },
                 "description": "",
                 "key": "worship",
+                "name": "Worship Albums"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Song => list,show",
+                    "noncacheableActions": ""
+                },
+                "description": "",
+                "key": "explicit",
+                "name": "Explicit Songs"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Album => list,show",
+                    "noncacheableActions": ""
+                },
+                "description": "",
+                "key": "released",
+                "name": "released Albums"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Album => list,show",
+                    "noncacheableActions": ""
+                },
+                "description": "",
+                "key": "albumsperinterpreter",
+                "name": "Albums per Interpret"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Genre => list,show",
+                    "noncacheableActions": ""
+                },
+                "description": "",
+                "key": "funkgenre",
+                "name": "Funk Genre"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Genre => list,show",
+                    "noncacheableActions": ""
+                },
+                "description": "",
+                "key": "worshipgenre",
                 "name": "Worship Albums"
             }
         ],
@@ -724,7 +776,7 @@
     ],
     "storagePath": "\/usr\/www\/users\/sstudv9k\/cms21\/packages\/",
     "log": {
-        "last_modified": "2022-04-23 12:36",
+        "last_modified": "2022-04-24 08:13",
         "extension_builder_version": "10.0.3",
         "be_user": " (1)"
     }

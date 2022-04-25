@@ -32,26 +32,25 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $albumRepository = null;
 
     /**
+     * @var null
+     */
+    protected $genreRepository = null;
+
+    /**
      * @param \HannaRodler\Albums\Domain\Repository\AlbumRepository $albumRepository
      */
     public function injectAlbumRepository(\HannaRodler\Albums\Domain\Repository\AlbumRepository $albumRepository)
     {
         $this->albumRepository = $albumRepository;
     }
-  
-  /**
-   * @var null
-   */
-    protected ?GenreRepository $genreRepository = null;
-  
-  /**
-   * @param GenreRepository $genreRepository
-   *
-   * @return \HannaRodler\Albums\Domain\Repository\GenreRepository
-   * $genreRepository
-   */
-    public function injectGenreRepository(GenreRepository $genreRepository){
-      $this->genreRepository = $genreRepository;
+
+    /**
+     * @param GenreRepository $genreRepository
+     * @return \HannaRodler\Albums\Domain\Repository\GenreRepository
+     */
+    public function injectGenreRepository(GenreRepository $genreRepository)
+    {
+        $this->genreRepository = $genreRepository;
     }
 
     /**
@@ -61,9 +60,9 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function listAction()
     {
-      $filter = new Filter();
-      $albums=$this->albumRepository->findByFilter($filter);
-      $this->view->assign('albums', $albums);
+        $filter = new Filter();
+        $albums = $this->albumRepository->findByFilter($filter);
+        $this->view->assign('albums', $albums);
     }
 
     /**
@@ -84,18 +83,16 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function availableeverywhereAction()
     {
-      $filter=$this->getFilter();
-      $albums=$this->albumRepository->findByFilter($filter);
-      $this->view->assign('albums', $albums);
+        $filter = $this->getFilter();
+        $albums = $this->albumRepository->findByFilter($filter);
+        $this->view->assign('albums', $albums);
     }
     protected function getFilter()
     {
-      $filter=new Filter();
-      $filter->setSpotifyAvailable((bool)($this->settings['filter']['spotifyAvailable']??true));
-
-      $filter->setAppleMusicAvailable((bool)($this->settings['filter']['appleMusicAvailable'] ?? true));
-  
-      return $filter;
+        $filter = new Filter();
+        $filter->setSpotifyAvailable((bool) ($this->settings['filter']['spotifyAvailable'] ?? true));
+        $filter->setAppleMusicAvailable((bool) ($this->settings['filter']['appleMusicAvailable'] ?? true));
+        return $filter;
     }
 
     /**
@@ -105,27 +102,26 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function funkAction()
     {
-      $filter = new Filter();
-      $filter->setGenres("Funk");
-      $albums = $this->genreRepository->findByFilter($filter);
-      $this->view->assign('albums', $albums);
-      
-      /*$filter= new Filter();
-      $filter->setGenres(['funk']);
-      $funk=$this->albumRepository->findByFilter($filter);
-      $this->view->assign('albums',$funk);*/
+        $filter = new Filter();
+        $filter->setGenres("Funk");
+        $albums = $this->genreRepository->findByFilter($filter);
+        $this->view->assign('albums', $albums);
+
+        /*$filter= new Filter();
+          $filter->setGenres(['funk']);
+          $funk=$this->albumRepository->findByFilter($filter);
+          $this->view->assign('albums',$funk);*/
     }
-    
-    protected function getFunkFilter(){
-      $filter= new Filter();
-      $filter->setGenres('Funk');
-      var_dump($filter);
-      return $filter;
-      
-      /*$funkFilter = new Filter();
-      $genres = $this->albumRepository->findByFilter($funkFilter);
-      return $genres;*/
-      
+    protected function getFunkFilter()
+    {
+        $filter = new Filter();
+        $filter->setGenres('Funk');
+        var_dump($filter);
+        return $filter;
+
+        /*$funkFilter = new Filter();
+          $genres = $this->albumRepository->findByFilter($funkFilter);
+          return $genres;*/
     }
 
     /**
@@ -134,6 +130,24 @@ class AlbumController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return string|object|null|void
      */
     public function worshipAction()
+    {
+    }
+
+    /**
+     * action released
+     *
+     * @return string|object|null|void
+     */
+    public function releasedAction()
+    {
+    }
+
+    /**
+     * action albumsPerInterpreter
+     *
+     * @return string|object|null|void
+     */
+    public function albumsPerInterpreterAction()
     {
     }
 }

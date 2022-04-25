@@ -20,19 +20,21 @@ use HannaRodler\Albums\Domain\Model\Dto\Filter;
  */
 class GenreRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-  public function findByFilter(Filter $filter){
-    $query = $this->createQuery();
-    $query->getQuerySettings()->setRespectStoragePage(false);
-    
-    $constraints=[];
-    if($filter->getGenres()){
-      $constraints[]=$query->equals('name', $filter->getGenres());
+
+    /**
+     * @param Filter $filter
+     */
+    public function findByFilter(Filter $filter)
+    {
+        $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(false);
+        $constraints = [];
+        if ($filter->getGenres()) {
+            $constraints[] = $query->equals('name', $filter->getGenres());
+        }
+        if (!empty($constraints)) {
+            $query->matching($query->logicalAnd($constraints));
+        }
+        return $query->execute();
     }
-  
-    if(!empty($constraints)){
-      $query->matching($query->logicalAnd($constraints));
-    }
-    
-    return $query->execute();
-  }
 }

@@ -82,3 +82,73 @@ plugin.tx_albums_worship {
         storagePid =
     }
 }
+plugin.tx_albums_explicit {
+    view {
+        # cat=plugin.tx_albums_explicit/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_explicit/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_explicit/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_explicit//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_released {
+    view {
+        # cat=plugin.tx_albums_released/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_released/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_released/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_released//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_albumsperinterpreter {
+    view {
+        # cat=plugin.tx_albums_albumsperinterpreter/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_albumsperinterpreter/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_albumsperinterpreter/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_albumsperinterpreter//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_funkgenre {
+    view {
+        # cat=plugin.tx_albums_funkgenre/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_funkgenre/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_funkgenre/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_funkgenre//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_albums_worshipgenre {
+    view {
+        # cat=plugin.tx_albums_worshipgenre/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:albums/Resources/Private/Templates/
+        # cat=plugin.tx_albums_worshipgenre/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:albums/Resources/Private/Partials/
+        # cat=plugin.tx_albums_worshipgenre/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:albums/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_albums_worshipgenre//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

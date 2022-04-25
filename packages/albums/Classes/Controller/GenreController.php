@@ -21,6 +21,13 @@ class GenreController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
     /**
+     * genreRepository
+     *
+     * @var \HannaRodler\Albums\Domain\Repository\GenreRepository
+     */
+    protected $genreRepository = null;
+
+    /**
      * action list
      *
      * @return string|object|null|void
@@ -40,5 +47,31 @@ class GenreController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function showAction(\HannaRodler\Albums\Domain\Model\Genre $genre)
     {
         $this->view->assign('genre', $genre);
+    }
+
+    /**
+     * @param \HannaRodler\Albums\Domain\Repository\GenreRepository $genreRepository
+     */
+    public function injectGenreRepository(\HannaRodler\Albums\Domain\Repository\GenreRepository $genreRepository)
+    {
+        $this->genreRepository = $genreRepository;
+    }
+
+    /**
+     * action funkGenre
+     *
+     * @return string|object|null|void
+     */
+    public function funkGenreAction()
+    {
+    }
+
+    /**
+     * action worshipGenre
+     *
+     * @return string|object|null|void
+     */
+    public function worshipGenreAction()
+    {
     }
 }

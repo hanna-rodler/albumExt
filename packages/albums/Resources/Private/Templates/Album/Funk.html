@@ -12,10 +12,27 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Template for funk action :)</h1>
   <f:debug>{_all}</f:debug>
-
+  <f:flashMessages/>
+  <h1>Funk</h1>
   <div class="albumOverview">
+    <div class="filterbar">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form class="d-flex mb-2">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <div class="justify-content-end my-sm-0 my-3">
+            <button type="button" class="btn btn-outline-dark">explicit</button>
+            <button type="button" class="btn btn-outline-dark">Spotify</button>
+            <button type="button" class="btn btn-outline-dark">Apple Music</button>
+            <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">veröffentlicht</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
     <div class="card-group d-grid">
       <div class="row">
         <f:for each="{albums}" as="album">
@@ -36,21 +53,19 @@ Otherwise your changes will be overwritten the next time you save the extension 
                   {album.teaser}</p></f:link.action>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;
-                  <f:for each="{album.genres}" as="genre">
-                    <span>{genre.name}</span>
-                  </f:for>
+                <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;<f:for
+                        each="{album.genres}" as="genre">
+                  <span>{genre.name}</span>
+                </f:for>
                 </li>
               </ul>
               <div class="card-footer">
-                <p><i class="fa fa-user"></i>&nbsp;&nbsp;
                 <p><i class="fa fa-user"></i>&nbsp;&nbsp;
                   <f:for each="{album.songs}" as="song">
                     <f:for each="{song.interprets}" as="interpreter">
                       <span>{interpreter.name}</span>
                     </f:for>
                   </f:for>
-                </p>
                 </p>
               </div>
             </div>
