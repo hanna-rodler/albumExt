@@ -12301,7 +12301,7 @@ h2.accordion-header {
 }
 
 
-.activeFilter , #activeFilter{
+.filterbar .activeFilter , #activeFilter{
     background-color: black;
     color: white;
 }

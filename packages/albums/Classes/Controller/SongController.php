@@ -41,9 +41,16 @@ class SongController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      *
      * @return string|object|null|void
      */
-    public function listAction()
+    public function listAction(array $demands=[])
     {
         $filter = new Filter();
+        if($demands['isExplicit']){
+          $filter->setIsExplicit(true);
+        }
+        if(!$demands['isExplicit']){
+          $filter->setIsExplicit(false);
+        }
+        
         $songs = $this->songRepository->findByFilter($filter);
         $this->view->assign('songs', $songs);
     }

@@ -60,7 +60,6 @@ class AlbumController
    * @return string|object|null|void
    */
   public function listAction(array $demands=[]){
-    var_dump($demands);
     $filter=new Filter();
     if($demands['beforeToday']){
       $filter->setReleased(true);
