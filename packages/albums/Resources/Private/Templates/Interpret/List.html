@@ -30,8 +30,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
         <f:for each="{interprets}" as="interpret">
             <tr>
                 <td><f:link.action action="show" arguments="{interpret : interpret}">{interpret.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{interpret : interpret}">{interpret.biography}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{interpret : interpret}">{interpret.gallery.originalResource.name}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{interpret : interpret}">
+                    {interpret.biography -> f:format.html()}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{interpret : interpret}">
+                    <f:for each="{interpret.gallery}" as="media" iteration="1">
+                        <f:if condition="{cycle}=1">
+                            {interpret.gallery.originalResource.name}
+                        </f:if>
+                        {media}
+                    </f:for>{interpret.gallery.originalResource.name}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{interpret : interpret}">{interpret.birthdate -> f:format.date()}</f:link.action></td>
             </tr>
         </f:for>

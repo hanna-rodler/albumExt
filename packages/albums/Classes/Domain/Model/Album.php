@@ -416,4 +416,27 @@ class Album extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->genres = $genres;
     }
+    
+    public function getAllInterprets() {
+      $interprets = [];
+      foreach($this->songs as $song) {
+        /** @var Song $song */
+        foreach($song->getInterprets() as $interpret) {
+          $interprets[$interpret->getUid()] = $interpret;
+        }
+      }
+      
+      return $interprets;
+    }
+    
+    public function getAvgRatings(){
+      if(count($this->ratings)==0){
+        return 0;
+      }
+      $sumRatings=0;
+      foreach($this->ratings as $rating){
+        $sumRatings+=$rating->getStars();
+      }
+      return $sumRatings/ count($this->ratings);
+    }
 }

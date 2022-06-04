@@ -10,6 +10,8 @@ plugin.tx_albums {
             listPage = 69
         }
     }
+
+
 }
 
 plugin.tx_albums_songs{
@@ -22,6 +24,22 @@ plugin.tx_albums_songs{
             detailPage = 80
             listPage = 72
         }
+    }
+}
+
+plugin.tx_albums_interpreters{
+    settings{
+        interpreters {
+            detailPage = 73
+            listPage = 71
+        }
+    }
+}
+
+page = PAGE
+page {
+    includeCSS {
+        30 = EXT:albums/Resources/Public/css/main.css
     }
 }
 
@@ -267,6 +285,8 @@ plugin.tx_albums_worshipgenre {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
+
+
 
 # these classes are only used in auto-generated templates
 plugin.tx_albums._CSS_DEFAULT_STYLE (

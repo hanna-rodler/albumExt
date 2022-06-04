@@ -12,8 +12,25 @@ class Filter{
   protected bool $appleMusicAvailable = false;
   protected string $genre = "";
   protected bool $isExplicit = false;
-  protected bool $released = false;
-  protected $releaseDate = null;
+  /*protected bool $released = false;
+  protected $releaseDate = null;*/
+  protected $albums = 0;
+  protected $interpret = 0;
+  protected $released = false;
+  
+  /**
+   * @return string
+   */
+  public function getGenre(): string{
+    return $this->genre;
+  }
+  
+  /**
+   * @param string $genre
+   */
+  public function setGenre(string $genre): void{
+    $this->genre=$genre;
+  }
   
   /**
    * @return string
@@ -101,6 +118,33 @@ class Filter{
     $this->releaseDate=$releaseDate;
   }
   
+  /**
+   * @return int
+   */
+  public function getAlbums(): int{
+    return $this->albums;
+  }
+  
+  /**
+   * @param int $albums
+   */
+  public function setAlbums(int $albums): void{
+    $this->albums=$albums;
+  }
+  
+  /**
+   * @return int
+   */
+  public function getInterpret(): int{
+    return $this->interpret;
+  }
+  
+  /**
+   * @param int $interpret
+   */
+  public function setInterpret(int $interpret): void{
+    $this->interpret=$interpret;
+  }
   
 }
 

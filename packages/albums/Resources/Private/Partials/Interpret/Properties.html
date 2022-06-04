@@ -9,9 +9,14 @@
 		<td>{interpret.biography}</td>
 	</tr>
 	<tr>
+
 		<td><f:translate key="tx_albums_domain_model_interpret.gallery" /></td>
 		<td>
-				<f:image src="{interpret.gallery.originalResource.publicUrl}" width="200"/>
+			<f:if condition="{interpret.gallery}">
+				<f:for each="{interpret.gallery}" as="media">
+					<f:image src="{media.originalResource.publicUrl}" maxWidth="200" maxHeight="200" loading="lazy"/>
+				</f:for>
+			</f:if>
             </td>
 	</tr>
 	<tr>
