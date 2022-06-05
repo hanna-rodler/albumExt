@@ -12257,7 +12257,7 @@ nav + img.img-fluid {
 
 /*--- ALBUM ---*/
 
-.albumOverview nav {
+.albumOverview nav, .filterbar .navbar {
     border-bottom: none;
 }
 
@@ -12336,4 +12336,8 @@ h2.accordion-header {
 
 .tx-albums h2{
     font-family: "Arial", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.tx-albums .funkAlbum {
+    color: #e28430;
 }
