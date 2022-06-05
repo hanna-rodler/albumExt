@@ -27,6 +27,7 @@ class InterpretRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function findByFilter(Filter $filter)
     {
         $query = $this->createQuery();
+        $query->setOrderings(['name' => 'ASC']);
         $query->getQuerySettings()->setRespectStoragePage(false);
         $constraints = [];
         if ($filter->isSpotifyAvailable()) {
