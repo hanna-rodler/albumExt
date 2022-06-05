@@ -12306,3 +12306,7 @@ h2.accordion-header {
     background-color: black;
     color: white;
 }
+
+.accordion-body .text-muted {
+    margin-top: -1rem;
+}

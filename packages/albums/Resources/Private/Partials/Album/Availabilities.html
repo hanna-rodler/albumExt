@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<p>
+    <f:image src="EXT:albums/Resources/Public/Icons/spotify.png" alt="Spotify" width="30"/>
+    <f:if condition="{album.spotifyAvailable}">
+        <f:then>
+            &nbsp;available
+        </f:then>
+        <f:else>
+            &nbsp;<span class="text-muted">unavailable</span>
+        </f:else>
+    </f:if>
+</p>
+<p>
+    <f:image src="EXT:albums/Resources/Public/Icons/apple.png" alt="Apple Music" width="30"/>
+    <f:if condition="{album.appleMusicAvailable}">
+        <f:then>
+            &nbsp;available
+        </f:then>
+        <f:else>
+            &nbsp;<span class="text-muted">unavailable</span>
+        </f:else>
+    </f:if>
+</p>
