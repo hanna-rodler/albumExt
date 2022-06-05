@@ -60,7 +60,9 @@ class AlbumController
    * @return string|object|null|void
    */
   public function listAction(array $demands=[]){
+  
     $filter=new Filter();
+    $this->view->assign('filter', $filter);
     if($demands['beforeToday']){
       $filter->setReleased(true);
     }

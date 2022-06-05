@@ -46,7 +46,6 @@ class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     }
     if($filter->isReleased()){
       $end = new \DateTime();
-      var_dump($end);
       $constraints[]=$query->lessThanOrEqual('releaseDate', mktime((int)$end));
     }
     
