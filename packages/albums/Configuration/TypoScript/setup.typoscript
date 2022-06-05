@@ -8,6 +8,8 @@ plugin.tx_albums {
         album {
             detailPage = 70
             listPage = 69
+            worshipPage=82
+            funkPage=77
         }
     }
 

@@ -50,24 +50,6 @@
                         </f:link.action>
                     </f:else>
                 </f:if>
-                <f:comment>
-                    <f:if condition="{filter.isExplicit} == 'true'">
-                        <f:then>
-                            <f:link.action action="list" arguments="{demands:{isExplicit:'true'}}"
-                                           controller="Album" addQueryString="GET">
-                                <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">explicit
-                                </button>
-                            </f:link.action>
-                        </f:then>
-                        <f:else>
-                            <f:link.action action="list" arguments="{demands:{isExplicit:'true'}}"
-                                           controller="Album" addQueryString="GET">
-                                <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">explicit
-                                </button>
-                            </f:link.action>
-                        </f:else>
-                    </f:if>
-                </f:comment>
             </div>
         </div>
     </nav>

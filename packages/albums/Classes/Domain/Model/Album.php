@@ -444,4 +444,18 @@ class Album extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     $seconds-=$minutes*60;
     return $hours.":".$minutes.":$seconds hrs";
   }
+  
+  public function getWorshipAlbum(){
+    foreach($this->genres as $genre){
+      if($genre->getName() === "Worship")
+        return true;
+    }
+  }
+  
+  public function getFunkAlbum(){
+    foreach($this->genres as $genre){
+      if($genre->getName()==="Funk")
+        return true;
+    }
+  }
 }

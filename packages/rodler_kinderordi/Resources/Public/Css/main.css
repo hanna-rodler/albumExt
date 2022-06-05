@@ -12328,3 +12328,12 @@ h2.accordion-header {
     color: black;
     font-weight: bold;
 }
+
+
+.tx-albums .worshipAlbum {
+    color: #650021;
+}
+
+.tx-albums h2{
+    font-family: "Arial", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
