@@ -41,7 +41,7 @@ class AlbumRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
       $constraints[]=$query->lessThanOrEqual('releaseDate', $filter->getReleaseDate());
     }
     if($filter->getInterpret()){
-      $constraints[]=$query->lessThanOrEqual('songs.interprets',
+      $constraints[]=$query->equals('songs.interprets.name',
         $filter->getInterpret());
     }
     if($filter->isReleased()){

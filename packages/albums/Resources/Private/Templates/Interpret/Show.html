@@ -1,24 +1,74 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Default"/>
 
 This template is responsible for displaying a single view for a domain object
 
 If you modify this template, do not forget to change the overwrite settings
 in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Interpret:
-          Show.html: keep
+Resources:
+Private:
+Templates:
+Interpret:
+Show.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
     <h1>Single View for Interpret</h1>
+    <f:flashMessages/>
+    <f:render partial="Interpret/Properties" arguments="{interpret:interpret}"/>
+    <div class="card-group d-grid">
+        <div class="row">
+            <f:for each="{interpretAlbums}" as="album">
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                    <div class="card">
+                        <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
+                                       controller="Album"
+                                       arguments="{album : album}">
+                            <f:image src="{album.media.originalResource.publicUrl}" class="card-img-top"
+                                     width="200"/>
+                        </f:link.action>
+                        <div class="card-body">
+                            <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
+                                           controller="Album"
+                                           arguments="{album : album}"><h4>{album.name}</h4>
+                            </f:link.action>
+                            <small class="text-muted">
+                                <f:count>{album.ratings}</f:count>&nbsp;Bewertungen</small>
+                            <small class="text-muted">durschnittliche Bewertungen: {album.avgRatings}
+                            </small>
+                            <f:link.action action="show" arguments="{album : album}" controller="Album" pluginName="Default"><p
+                                    class="card-text">
+                                {album.teaser}</p></f:link.action>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;<f:for
+                                    each="{album.genres}" as="genre">
+                                <span>{genre.name}</span>
+                            </f:for>
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <p><i class="fa fa-user"></i>&nbsp;&nbsp;
+                                <f:for each="{album.allInterprets}" as="interpret">
+                                    <f:link.action action="show" controller="Interpret"
+                                                   arguments="{interpret:interpret}"
+                                                   pageUid="{settings.interprets.detailPage}" pluginName="interpreters">
+                                        <span>{interpret.name}</span>
+                                    </f:link.action>
+                                </f:for>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
 
-    <f:flashMessages />
-    <f:render partial="Interpret/Properties" arguments="{interpret:interpret}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
+    </div>
+    <f:link.action action="list">Back to list</f:link.action>
+    <br/>
     <f:link.action action="new">New Interpret</f:link.action>
+
+
 </f:section>
 </html>

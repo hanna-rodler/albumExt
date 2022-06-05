@@ -121,15 +121,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 </li>
                             </ul>
                             <div class="card-footer">
-                                <p><i class="fa fa-user"></i>&nbsp;&nbsp;
-                                    <f:for each="{album.allInterprets}" as="interpret">
-                                        <f:link.action action="show" controller="Interpret"
-                                                       arguments="{interpret:interpret}"
-                                                       pageUid="{settings.interprets.detailPage}">
-                                            <span>{interpret.name}</span>
-                                        </f:link.action>
-                                    </f:for>
-                                </p>
+                                    <p><i class="fa fa-user"></i>&nbsp;&nbsp;
+                                        <f:for each="{album.allInterprets}" as="interpret">
+                                            <f:link.action action="show" controller="Interpret"
+                                                           arguments="{interpret:interpret}"
+                                                           pageUid="{settings.interprets.detailPage}">
+                                                <span>{interpret.name}</span>
+                                            </f:link.action>
+                                        </f:for>
+                                    </p>
                             </div>
                         </div>
                     </div>

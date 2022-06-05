@@ -15,7 +15,7 @@ class Filter{
   /*protected bool $released = false;
   protected $releaseDate = null;*/
   protected $albums = 0;
-  protected $interpret = 0;
+  protected string $interpret = "";
   protected $released = false;
   
   /**
@@ -135,14 +135,14 @@ class Filter{
   /**
    * @return int
    */
-  public function getInterpret(): int{
+  public function getInterpret(): string{
     return $this->interpret;
   }
   
   /**
    * @param int $interpret
    */
-  public function setInterpret(int $interpret): void{
+  public function setInterpret(string $interpret): void{
     $this->interpret=$interpret;
   }
   

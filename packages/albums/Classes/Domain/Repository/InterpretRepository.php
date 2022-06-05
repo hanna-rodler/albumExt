@@ -38,6 +38,10 @@ class InterpretRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         if (!empty($constraints)) {
             $query->matching($query->logicalAnd($constraints));
         }
+   /*     if($filter->getAlbums()){
+          $constraints[]= $query->contains()
+        }*/
+        
         return $query->execute();
     }
 }

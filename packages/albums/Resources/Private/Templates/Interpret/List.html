@@ -29,17 +29,17 @@ Otherwise your changes will be overwritten the next time you save the extension 
         </tr>
         <f:for each="{interprets}" as="interpret">
             <tr>
-                <td><f:link.action action="show" arguments="{interpret : interpret}">{interpret.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{interpret : interpret}">
+                <td><f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">{interpret.name}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">
                     {interpret.biography -> f:format.html()}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{interpret : interpret}">
+                <td><f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">
                     <f:for each="{interpret.gallery}" as="media" iteration="1">
                         <f:if condition="{cycle}=1">
                             {interpret.gallery.originalResource.name}
                         </f:if>
                         {media}
                     </f:for>{interpret.gallery.originalResource.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{interpret : interpret}">{interpret.birthdate -> f:format.date()}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret" pluginName="Default">{interpret.birthdate -> f:format.date()}</f:link.action></td>
             </tr>
         </f:for>
     </table>
