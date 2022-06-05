@@ -1,27 +1,73 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-albums">
-	<tr>
-		<td><f:translate key="tx_albums_domain_model_interpret.name" /></td>
-		<td>{interpret.name}</td>
-	</tr>
-	<tr>
-		<td><f:translate key="tx_albums_domain_model_interpret.biography" /></td>
-		<td>{interpret.biography->f:format.html()}</td>
-	</tr>
-	<tr>
 
-		<td><f:translate key="tx_albums_domain_model_interpret.gallery" /></td>
-		<td>
-			<f:if condition="{interpret.gallery}">
-				<f:for each="{interpret.gallery}" as="media">
-					<f:image src="{media.originalResource.publicUrl}" maxWidth="200" maxHeight="200" loading="lazy"/>
-				</f:for>
-			</f:if>
-            </td>
-	</tr>
-	<tr>
-		<td><f:translate key="tx_albums_domain_model_interpret.birthdate" /></td>
-		<td>{interpret.birthdate -> f:format.date()}</td>
-	</tr>
-</table>
+<div class="row">
+    <div class="col-sm-4 col-4">
+        <h1>{interpret.name}</h1>
+        <div class="mt-4">geboren am:
+            <f:format.date format="d.m.Y">{interpret.birthdate}</f:format.date><br>Alter: {interpret.age}
+        </div>
+        <p>Nationalität: {interpret.nationality.countryFullName}</p>
+        <p><a href="#allAlbums">alle Alben</a></p>
+    </div>
+    <div class="col-sm-8 col-12 order-last">
+        <f:if condition="{interpret.gallery}">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-indicators">
+                <f:for each="{interpret.gallery}" as="media" iteration="iterator">
+                    <f:if condition="{iterator.index}==0">
+                        <f:then>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                        </f:then>
+                        <f:else>
+                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="{iterator.index}"
+                                    aria-label="Slide {iterator.index}"></button>
+                        </f:else>
+                    </f:if>
+                </f:for>
+                <f:comment>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                </f:comment>
+            </div>
+            <div class="carousel-inner">
+                <f:for each="{interpret.gallery}" as="media" iteration="iterator">
+                    <f:if condition="{iterator.index}==0">
+                        <f:then>
+                            <div class="carousel-item active">
+                                <f:image src="{media.originalResource.publicUrl}" class="d-block w-100" loading="lazy"/>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <div class="carousel-item">
+                                <f:image src="{media.originalResource.publicUrl}" class="d-block w-100" loading="lazy"/>
+                            </div>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </f:if>
+    </div>
+</div>
+<div class="row mt-4">
+    <f:format.html>{interpret.biography}</f:format.html>
+</div>
 </html>

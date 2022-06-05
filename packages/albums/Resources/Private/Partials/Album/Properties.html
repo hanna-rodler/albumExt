@@ -1,52 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:comment>
-    <table class="tx-albums">
-        <tr>
-            <td>
-                <f:translate key="tx_albums_domain_model_album.name"/>
-            </td>
-            <td>{album.name}</td>
-        </tr>
-        <tr>
-            <td>
-                <f:translate key="tx_albums_domain_model_album.media"/>
-            </td>
-            <td>
-                <f:image src="{album.media.originalResource.publicUrl}" width="200"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <f:translate key="tx_albums_domain_model_album.teaser"/>
-            </td>
-            <td>{album.teaser}</td>
-        </tr>
-        <tr>
-            <td>
-                <f:translate key="tx_albums_domain_model_album.description"/>
-            </td>
-            <td>{album.description}</td>
-        </tr>
-        <tr>
-            <td>
-                <f:translate key="tx_albums_domain_model_album.release_date"/>
-            </td>
-            <td>{album.releaseDate -> f:format.date()}</td>
-        </tr>
-        <tr>
-            <td>
-                <f:translate key="tx_albums_domain_model_album.spotify_available"/>
-            </td>
-            <td>{album.spotifyAvailable}</td>
-        </tr>
-        <tr>
-            <td>
-                <f:translate key="tx_albums_domain_model_album.apple_music_available"/>
-            </td>
-            <td>{album.appleMusicAvailable}</td>
-        </tr>
-    </table>
-</f:comment>
 <div class="row">
     <h2>{album.name}</h2>
 </div>
@@ -64,7 +16,7 @@
                     <f:for each="{album.allInterprets}" as="interpret">
                         <f:link.action action="show" controller="Interpret"
                                        arguments="{interpret:interpret}"
-                                       pageUid="{settings.interprets.detailPage}">
+                                       pageUid="{settings.interpreters.detailPage}">
                             <span>{interpret.name}</span>
                         </f:link.action>
                     </f:for>
@@ -96,7 +48,6 @@
         <f:render partial="Album/Availabilities" arguments="{album:album}"/>
     </div>
     <div class="col">
-        <!--        <a href="">weitere Alben des*der Interpret*in</a>-->
         <f:comment>
             <f:link.action pageUid="83" action="albumsPerInterpreter" controller="Album"
                            pluginName="AlbumsPerInterpreter"

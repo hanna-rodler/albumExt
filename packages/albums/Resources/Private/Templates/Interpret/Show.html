@@ -14,10 +14,10 @@ Show.html: keep
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Single View for Interpret</h1>
+    <f:debug>{settings}</f:debug>
     <f:flashMessages/>
     <f:render partial="Interpret/Properties" arguments="{interpret:interpret}"/>
-    <div class="card-group d-grid">
+    <div class="card-group d-grid mt-4" id="allAlbums">
         <div class="row">
             <f:for each="{interpretAlbums}" as="album">
                 <div class="col-xl-3 col-md-4 col-sm-6 col-12">
@@ -53,7 +53,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <f:for each="{album.allInterprets}" as="interpret">
                                     <f:link.action action="show" controller="Interpret"
                                                    arguments="{interpret:interpret}"
-                                                   pageUid="{settings.interprets.detailPage}" pluginName="interpreters">
+                                                   pageUid="{settings.interpreters.detailPage}" pluginName="interpreters">
                                         <span>{interpret.name}</span>
                                     </f:link.action>
                                 </f:for>
@@ -63,12 +63,29 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 </div>
             </f:for>
         </div>
-
     </div>
-    <f:link.action action="list">Back to list</f:link.action>
-    <br/>
-    <f:link.action action="new">New Interpret</f:link.action>
 
+    <f:if condition="{settings.interpreters.listPage}">
+        <f:then>
+            <div class="mt-4">
+                <f:link.page pageUid="{settings.interpreters.listPage">
+                    <f:translate key="backlinkLabel"/>
+                    <f:link.action action="list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                        Zurück
+                    </f:link.action>
+                </f:link.page>
+        </f:then>
+        <f:else>
+            <div class="mt-4">
+                <f:link.action action="list"> Zurück</f:link.action>
+        </f:else>
+        </div>
+    </f:if>
 
 </f:section>
 </html>

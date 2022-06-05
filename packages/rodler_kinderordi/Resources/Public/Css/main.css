@@ -12310,3 +12310,7 @@ h2.accordion-header {
 .accordion-body .text-muted {
     margin-top: -1rem;
 }
+
+.carousel-item img {
+    height: auto;
+}

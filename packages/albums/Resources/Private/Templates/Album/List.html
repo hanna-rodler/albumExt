@@ -18,8 +18,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
     <div class="albumOverview">
         <f:render partial="Album/Filterbar" arguments="{filter:filter}"/>
-
-        <div class="card-group d-grid">
+        <f:render partial="Album/AlbumCards" arguments="{albums:albums}"/>
+        <f:comment><div class="card-group d-grid">
             <div class="row">
                 <f:for each="{albums}" as="album">
                     <div class="col-xl-3 col-md-4 col-sm-6 col-12">
@@ -53,7 +53,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                     <f:for each="{album.allInterprets}" as="interpret">
                                         <f:link.action action="show" controller="Interpret"
                                                        arguments="{interpret:interpret}"
-                                                       pageUid="{settings.interprets.detailPage}">
+                                                       pageUid="{settings.interpreters.detailPage}">
                                             <span>{interpret.name}</span>
                                         </f:link.action>
                                     </f:for>
@@ -64,7 +64,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 </f:for>
             </div>
 
-        </div>
+        </div></f:comment>
     </div>
 </f:section>
 </html>

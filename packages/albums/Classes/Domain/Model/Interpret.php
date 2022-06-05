@@ -161,4 +161,10 @@ class Interpret extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->nationality = $nationality;
     }
+    
+    public function getAge(){
+      $now = new \DateTime();
+      $interval = $now->diff($this->birthdate);
+      return $interval->y;
+    }
 }
