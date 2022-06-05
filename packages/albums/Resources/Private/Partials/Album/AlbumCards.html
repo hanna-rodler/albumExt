@@ -4,41 +4,51 @@
         <f:for each="{albums}" as="album">
             <div class="col-xl-3 col-md-4 col-sm-6 col-12 mb-3">
                 <div class="card">
-                    <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
-                                   arguments="{album : album}">
-                        <f:image src="{album.media.originalResource.publicUrl}" class="card-img-top"
-                                 width="200"/>
-                    </f:link.action>
-                    <div class="card-body">
+                    <f:if condition="{album.media}">
                         <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
-                                       arguments="{album : album}"><h4>{album.name}</h4>
+                                       arguments="{album : album}">
+                            <f:image src="{album.media.originalResource.publicUrl}" class="card-img-top"
+                                     width="200"/>
                         </f:link.action>
-                        <f:comment>
-                            <small class="text-muted">
-                                <f:count>{album.ratings}</f:count>&nbsp;Bewertungen</small></f:comment>
-                        <small class="text-muted">durschnittliche Bewertungen: {album.avgRatings}
-                        </small>
-                        <f:link.action action="show" arguments="{album : album}"><p class="card-text">
-                            {album.teaser}</p></f:link.action>
+                    </f:if>
+                    <div class="card-body">
+                        <f:if condition="{album.name}">
+                            <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
+                                           arguments="{album : album}"><h4>{album.name}</h4>
+                            </f:link.action>
+                        </f:if>
+                        <f:if condition="{album.avgRatings}">
+                            <small class="text-muted">durschnittliche Bewertungen: {album.avgRatings}
+                            </small>
+                        </f:if>
+                        <f:if condition="{album.teaser}">
+                            <f:link.action action="show" arguments="{album : album}"><p class="card-text">
+                                {album.teaser}</p></f:link.action>
+                        </f:if>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;<f:for
-                                each="{album.genres}" as="genre">
-                            <span>{genre.name}</span>
-                        </f:for>
-                        </li>
-                    </ul>
-                    <div class="card-footer">
-                        <p><i class="fa fa-user"></i>&nbsp;&nbsp;
-                            <f:for each="{album.allInterprets}" as="interpret">
-                                <f:link.action action="show" controller="Interpret"
-                                               arguments="{interpret:interpret}"
-                                               pageUid="{settings.interpreters.detailPage}">
-                                    <span>{interpret.name}</span>
-                                </f:link.action>
+                        <f:if condition="{album.genres}">
+                            <li class="list-group-item"><i class='fa fa-headphones'></i>&nbsp;&nbsp;<f:for
+                                    each="{album.genres}" as="genre">
+                                <span>{genre.name}</span>
                             </f:for>
-                        </p>
-                    </div>
+                            </li>
+                        </f:if>
+                    </ul>
+                    <f:if condition="{album.allInterprets}">
+                        <div class="card-footer">
+                            <p><i class="fa fa-user"></i>&nbsp;&nbsp;
+                                <f:for each="{album.allInterprets}" as="interpret">
+                                    <f:link.action action="show" controller="Interpret"
+                                                   arguments="{interpret:interpret}"
+                                                   pageUid="{settings.interpreters.detailPage}">
+                                        <span>{interpret.name}</span>
+                                    </f:link.action>
+                                </f:for>
+                            </p>
+                        </div>
+                    </f:if>
+
                 </div>
             </div>
         </f:for>

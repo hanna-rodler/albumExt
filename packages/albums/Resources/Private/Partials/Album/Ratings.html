@@ -5,9 +5,7 @@
         <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <b><f:count>{album.ratings}</f:count>&nbsp;Bewertungen</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fas fa-star"></i><i
-                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
-                    class="far fa-star"></i></span> {album.avgRatings}
+                <b><f:count>{album.ratings}</f:count>&nbsp;Bewertungen</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;durchschnittlich {album.avgRatings} Sterne
             </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -24,10 +22,13 @@
                                     <span><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="far fa-star"></i><i
                                             class="far fa-star"></i><i class="far fa-star"></i></span></f:comment>
-                                {rating.stars} stars
+                                {rating.stars} Sterne
                             </div>
                         </div>
-                        <div>{rating.description->f:format.html()}
+                        <div>
+                            <f:format.html>
+                                {rating.description}
+                            </f:format.html>
                         </div>
                         <div class="text-muted">
                             <span>von: {rating.author}</span>&nbsp;&nbsp;&nbsp;<span>am: {rating.date->f:format.date()}</span>

@@ -173,7 +173,7 @@ return [
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
-                'rows' => 15,
+                'rows' => 4,
                 'eval' => 'trim',
                 'default' => ''
             ]
@@ -246,7 +246,7 @@ return [
                 'foreign_field' => 'album',
                 'maxitems' => 9999,
                 'appearance' => [
-                    'collapseAll' => 0,
+                    'collapseAll' => 1,
                     'levelLinksPosition' => 'top',
                     'showSynchronizationLink' => 1,
                     'showPossibleLocalizationRecords' => 1,
@@ -264,7 +264,7 @@ return [
                 'foreign_field' => 'album',
                 'maxitems' => 9999,
                 'appearance' => [
-                    'collapseAll' => 0,
+                    'collapseAll' => 1,
                     'levelLinksPosition' => 'top',
                     'showSynchronizationLink' => 1,
                     'showPossibleLocalizationRecords' => 1,

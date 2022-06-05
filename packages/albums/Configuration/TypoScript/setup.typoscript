@@ -41,7 +41,16 @@ plugin.tx_albums_interpreters{
 page = PAGE
 page {
     includeCSS {
-        30 = EXT:albums/Resources/Public/css/main.css
+        31 = EXT:albums/Resources/Public/css/main.css
+        32=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css
+    }
+
+    includeCSSLibs{
+        albums_layout = EXT:albums/Resources/Public/css/bootstra.min.css
+    }
+
+    includeJSFooterlibs {
+        33 = EXT:albums/Resources/Public/JavaScript/Dist/bootstrap.bundle.min.js
     }
 }
 

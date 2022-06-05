@@ -10,8 +10,7 @@
                 </div>
                 <div class="col-sm-5 col-12">
                     <f:for each="{song.allInterprets}" as="interpret">
-                        <f:link.action action="show" controller="Interpret"
-                                       arguments="{interpret:interpret}" pluginName="interpreter"
+                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret"
                                        pageUid="{settings.interpreters.detailPage}">
                             {interpret.name}
                         </f:link.action>

@@ -20,7 +20,7 @@
                                                    arguments="{interpret:interpret}"
                                                    pageUid="{settings.interpreters.detailPage}">
                                         <span>{interpret.name}</span>
-                                    </f:link.action>
+                                    </f:link.action>&nbsp;
                                 </f:for>
                             </f:if>
                         </p>
@@ -34,7 +34,9 @@
                 <div class="row mt-4">
                     <f:if condition="{album.description}">
                         <div class="col-sm-10 col-12">
-                            {album.description-> f:format.html()}
+                            <f:format.html>
+                                {album.description}
+                            </f:format.html>
                         </div>
                     </f:if>
 
@@ -53,7 +55,7 @@
             <f:if condition="{album.media}">
                 <div class="mt-4">
                     <div class="d-flex justify-content-center">
-                        <f:image src="{album.media.originalResource.publicUrl}" width="500" loading="lazy"
+                        <f:image src="{album.media.originalResource.publicUrl}" maxWidth="500" loading="lazy"
                                  class="rounded-3 shadow-sm"/>
                     </div>
                 </div>

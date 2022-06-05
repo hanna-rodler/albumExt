@@ -27,45 +27,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 </div>
             </f:for>
         </div>
-
     </div>
-
-    <f:comment>
-        <table class="tx_albums">
-            <tr>
-                <th>
-                    <f:translate key="tx_albums_domain_model_interpret.name"/>
-                </th>
-                <th>
-                    <f:translate key="tx_albums_domain_model_interpret.biography"/>
-                </th>
-                <th>
-                    <f:translate key="tx_albums_domain_model_interpret.birthdate"/>
-                </th>
-                <th></th>
-                <th></th>
-            </tr>
-            <f:for each="{interprets}" as="interpret">
-                <tr>
-                    <td>
-                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">
-                            {interpret.name}
-                        </f:link.action>
-                    </td>
-                    <td>
-                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">
-                            {interpret.biography -> f:format.html()}
-                        </f:link.action>
-                    </td>
-                    <td>
-                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret"
-                                       pluginName="Default">{interpret.birthdate -> f:format.date()}
-                        </f:link.action>
-                    </td>
-                </tr>
-            </f:for>
-        </table>
-    </f:comment>
-
 </f:section>
 </html>

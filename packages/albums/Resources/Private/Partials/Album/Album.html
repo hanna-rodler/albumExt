@@ -1,10 +1,12 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div class="row">
-    <h2>{album.name}</h2>
+    <f:if condition="{album.name}">
+        <h2>{album.name}</h2>
+    </f:if>
     <div class="row mt-3">
         <div class="col-xl-4 col-lg-5 col-md-6 order-first order-md-last">
             <f:if condition="{album.media}">
-                <f:image src="{album.media.originalResource.publicUrl}" width="200"
+                <f:image src="{album.media.originalResource.publicUrl}" maxWidth="200"
                          class="card-img-top rouded-3 shadow-sm"/>
             </f:if>
         </div>
@@ -18,7 +20,7 @@
                                                arguments="{interpret:interpret}"
                                                pageUid="{settings.interpreters.detailPage}">
                                     <span>{interpret.name}</span>
-                                </f:link.action>
+                                </f:link.action>&nbsp;
                             </f:for>
                         </f:if>
                     </p>
@@ -31,7 +33,9 @@
             </div>
             <f:if condition="{album.description}">
                 <div class="row">
-                    {album.description-> f:format.html()}
+                    <f:format.html>
+                        album.description
+                    </f:format.html>
                 </div>
             </f:if>
             <f:if condition="{album.releaseDate}">

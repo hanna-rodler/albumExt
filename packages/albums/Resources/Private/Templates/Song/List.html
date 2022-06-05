@@ -50,20 +50,21 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <f:link.action pageUid="{settings.songs.detailPage}" pluginName="songs" action="show"
                                                arguments="{song : song}">{song.name}
                                 </f:link.action>
-                                <!-- TODO: link to correct show view-->
                             </div>
                             <div class="col-sm-5 col-12">
                                 <f:for each="{song.allInterprets}" as="interpret">
-                                    <f:link.action action="show" controller="Interpret"
-                                                   arguments="{interpret:interpret}" pluginName="interpreter"
-                                                   pageUid="{settings.interpreters.detailPage}">
+                                    <f:link.action action="show" arguments="{interpret : interpret}"
+                                                   controller="Interpret" pageUid="{settings.interpreters.detailPage}"
+                                                   pluginName="interpreters">
                                         {interpret.name}
-                                    </f:link.action>
+                                    </f:link.action>&nbsp;
                                 </f:for>
                             </div>
-                            <div class="col-sm-1 col-6">
-                                {song.durationMinsSecs}
-                            </div>
+                            <f:if condition="{song.durationMinsSecs}">
+                                <div class="col-sm-1 col-6">
+                                    {song.durationMinsSecs}
+                                </div>
+                            </f:if>
                             <f:if condition="{song.explicitContent}=='true'">
                                 <f:then>
                                     <div class="col-sm-1 col-auto d-sm-flex justify-content-end">

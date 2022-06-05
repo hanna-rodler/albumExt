@@ -14,11 +14,29 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Single View for Song</h1>
-
     <f:flashMessages />
     <f:render partial="Song/Properties" arguments="{song:song}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Song</f:link.action>
+
+    <f:if condition="{settings.songs.listPage}">
+        <f:then>
+            <div class="mt-4">
+            <f:link.page pageUid="{settings.song.listPage">
+                <f:translate key="backlinkLabel"/>
+                <f:link.action action="list">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    Zurück
+                </f:link.action>
+            </f:link.page>
+        </f:then>
+            <f:else>
+                <div class="mt-4">
+                <f:link.action action="list"><i class="bi bi-arrow-left"></i> Zurück</f:link.action>
+            </f:else>
+        </div>
+    </f:if>
 </f:section>
 </html>

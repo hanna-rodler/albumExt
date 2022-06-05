@@ -1,15 +1,15 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <div class="row">
-    <div class="col-sm-4 col-4">
+    <div class="col-sm-5 col-4">
         <h1>{interpret.name}</h1>
-        <div class="mt-4">geboren am:
-            <f:format.date format="d.m.Y">{interpret.birthdate}</f:format.date><br>Alter: {interpret.age}
+        <div class="mt-4">geboren / gegründet am:
+            <f:format.date format="d.m.Y">{interpret.birthdate}</f:format.date>
         </div>
         <p>Nationalität: {interpret.nationality.countryFullName}</p>
-        <p><a href="#allAlbums">alle Alben</a></p>
+        <p><a href="#allAlbums">alle Alben des*der Künstler*in</a></p>
     </div>
-    <div class="col-sm-8 col-12 order-last">
+    <div class="col-sm-7 col-12 order-last">
         <f:if condition="{interpret.gallery}">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
             <div class="carousel-indicators">
