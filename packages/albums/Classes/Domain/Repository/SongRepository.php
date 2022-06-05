@@ -30,9 +30,9 @@ class SongRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     $query->getQuerySettings()->setRespectStoragePage(false);
     $constraints=[];
     
-    if($filter->isExplicit()){
+    /*if($filter->isExplicit()){
       $constraints[]=$query->equals('explicitContent', true);
-    }
+    }*/
     if(!$filter->isExplicit()){
       $constraints[]=$query->equals('explicitContent', false);
     }
