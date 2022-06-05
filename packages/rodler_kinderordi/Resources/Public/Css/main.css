@@ -12314,3 +12314,17 @@ h2.accordion-header {
 .carousel-item img {
     height: auto;
 }
+
+.singleInterpret {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.singleInterpret a {
+    color: black;
+    font-weight: bold;
+}

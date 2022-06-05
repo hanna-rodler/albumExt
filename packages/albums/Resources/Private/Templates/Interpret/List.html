@@ -1,40 +1,71 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Default"/>
 
 This template is responsible for creating a table of domain objects.
 
 If you modify this template, do not forget to change the overwrite settings
 in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Interpret:
-          List.html: keep
+Resources:
+Private:
+Templates:
+Interpret:
+List.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Listing for Interpret</h1>
+    <f:flashMessages/>
+    <div class="allInterprets d-grid">
+        <div class="row">
+            <f:for each="{interprets}" as="interpret">
+                <div class="col-6">
+                    <div class="singleInterpret">
+                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret" pageUid="{settings.interpreters.detailPage}">
+                        {interpret.name}
+                        </f:link.action>
+                    </div>
+                </div>
+            </f:for>
+        </div>
 
-    <f:flashMessages />
+    </div>
 
-    <table class="tx_albums">
-        <tr>
-            <th><f:translate key="tx_albums_domain_model_interpret.name" /></th>
-            <th><f:translate key="tx_albums_domain_model_interpret.biography" /></th>
-            <th><f:translate key="tx_albums_domain_model_interpret.birthdate" /></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <f:for each="{interprets}" as="interpret">
+    <f:comment>
+        <table class="tx_albums">
             <tr>
-                <td><f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">{interpret.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">
-                    {interpret.biography -> f:format.html()}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret" pluginName="Default">{interpret.birthdate -> f:format.date()}</f:link.action></td>
+                <th>
+                    <f:translate key="tx_albums_domain_model_interpret.name"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_interpret.biography"/>
+                </th>
+                <th>
+                    <f:translate key="tx_albums_domain_model_interpret.birthdate"/>
+                </th>
+                <th></th>
+                <th></th>
             </tr>
-        </f:for>
-    </table>
+            <f:for each="{interprets}" as="interpret">
+                <tr>
+                    <td>
+                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">
+                            {interpret.name}
+                        </f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret">
+                            {interpret.biography -> f:format.html()}
+                        </f:link.action>
+                    </td>
+                    <td>
+                        <f:link.action action="show" arguments="{interpret : interpret}" controller="Interpret"
+                                       pluginName="Default">{interpret.birthdate -> f:format.date()}
+                        </f:link.action>
+                    </td>
+                </tr>
+            </f:for>
+        </table>
+    </f:comment>
 
 </f:section>
 </html>
