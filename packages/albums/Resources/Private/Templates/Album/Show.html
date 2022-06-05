@@ -2,23 +2,36 @@
 <f:layout name="Default"/>
 
 
-
 <f:section name="content">
-    <h1>View for one Album</h1>
-
     <f:flashMessages/>
     <f:render partial="Album/Properties" arguments="{album:album}"/>
     <f:if condition="{settings.album.listPage}">
         <f:then>
-            <f:link.page pageUid="{settings.album.listPage">
-                <f:translate key="backlinkLabel"/>
-                <f:link.action action="list">Zurück</f:link.action>
-            </f:link.page>
+            <div class="mt-4">
+                <f:link.page pageUid="{settings.album.listPage">
+                    <f:translate key="backlinkLabel"/>
+                    <f:link.action action="list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                        Zurück
+                    </f:link.action>
+                </f:link.page>
         </f:then>
         <f:else>
-            <f:link.action action="list">Zurück</f:link.action>
+            <div class="mt-4">
+                <f:link.action action="list"><i class="bi bi-arrow-left"></i> Zurück</f:link.action>
         </f:else>
+        </div>
     </f:if>
-    <br/>
+
+    <div class="credits mt-5">
+        <a href="https://www.flaticon.com/free-icons/spotify" title="spotify icons">Spotify icons created by Fathema
+            Khanom - Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/apple" title="apple icons">Apple icons created by Freepik -
+            Flaticon</a>
+    </div>
 </f:section>
 </html>

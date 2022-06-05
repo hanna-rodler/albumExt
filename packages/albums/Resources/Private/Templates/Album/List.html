@@ -72,20 +72,22 @@ Otherwise your changes will be overwritten the next time you save the extension 
                             </f:else>
                         </f:if>
                         <f:comment>
-                        <f:if condition="{filter.isExplicit} == 'true'">
-                            <f:then>
-                                <f:link.action action="list" arguments="{demands:{isExplicit:'true'}}"
-                                               controller="Album">
-                                    <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">explicit</button>
-                                </f:link.action>
-                            </f:then>
-                            <f:else>
-                                <f:link.action action="list" arguments="{demands:{isExplicit:'true'}}"
-                                               controller="Album">
-                                    <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">explicit</button>
-                                </f:link.action>
-                            </f:else>
-                        </f:if>
+                            <f:if condition="{filter.isExplicit} == 'true'">
+                                <f:then>
+                                    <f:link.action action="list" arguments="{demands:{isExplicit:'true'}}"
+                                                   controller="Album">
+                                        <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">explicit
+                                        </button>
+                                    </f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:link.action action="list" arguments="{demands:{isExplicit:'true'}}"
+                                                   controller="Album">
+                                        <button type="button" class="btn btn-outline-dark mt-sm-0 mt-2">explicit
+                                        </button>
+                                    </f:link.action>
+                                </f:else>
+                            </f:if>
                         </f:comment>
                     </div>
                 </div>
@@ -106,8 +108,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <f:link.action pageUid="{settings.album.detailPage}" pluginName="Default" action="show"
                                                arguments="{album : album}"><h4>{album.name}</h4>
                                 </f:link.action>
-                                <small class="text-muted">
-                                    <f:count>{album.ratings}</f:count>&nbsp;Bewertungen</small>
+                                <f:comment>
+                                    <small class="text-muted">
+                                        <f:count>{album.ratings}</f:count>&nbsp;Bewertungen</small></f:comment>
                                 <small class="text-muted">durschnittliche Bewertungen: {album.avgRatings}
                                 </small>
                                 <f:link.action action="show" arguments="{album : album}"><p class="card-text">
@@ -121,15 +124,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 </li>
                             </ul>
                             <div class="card-footer">
-                                    <p><i class="fa fa-user"></i>&nbsp;&nbsp;
-                                        <f:for each="{album.allInterprets}" as="interpret">
-                                            <f:link.action action="show" controller="Interpret"
-                                                           arguments="{interpret:interpret}"
-                                                           pageUid="{settings.interprets.detailPage}">
-                                                <span>{interpret.name}</span>
-                                            </f:link.action>
-                                        </f:for>
-                                    </p>
+                                <p><i class="fa fa-user"></i>&nbsp;&nbsp;
+                                    <f:for each="{album.allInterprets}" as="interpret">
+                                        <f:link.action action="show" controller="Interpret"
+                                                       arguments="{interpret:interpret}"
+                                                       pageUid="{settings.interprets.detailPage}">
+                                            <span>{interpret.name}</span>
+                                        </f:link.action>
+                                    </f:for>
+                                </p>
                             </div>
                         </div>
                     </div>

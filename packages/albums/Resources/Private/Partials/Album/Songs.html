@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="mt-4">
+    <ul class="list-group">
+        <f:for each="{songs}" as="song">
+            <li class="list-group-item d-sm-flex justify-content-sm-between align-items-sm-start">
+                <div class="col-sm-5 col-12">
+                    <f:link.action pageUid="{settings.songs.detailPage}" pluginName="songs" action="show"
+                                   arguments="{song : song}">{song.name}
+                    </f:link.action>
+                    <!-- TODO: link to correct show view-->
+                </div>
+                <div class="col-sm-5 col-12">
+                    <f:for each="{song.allInterprets}" as="interpret">
+                        <f:link.action action="show" controller="Interpret"
+                                       arguments="{interpret:interpret}"
+                                       pageUid="{settings.interprets.detailPage}">
+                            <span>{interpret.name}</span>
+                        </f:link.action>
+                    </f:for>
+                </div>
+                <div class="col-sm-1 col-6">
+                    {song.durationMinsSecs}
+                </div>
+                <f:if condition="{song.explicitContent}=='true'">
+                    <f:then>
+                        <div class="col-sm-1 col-auto d-sm-flex justify-content-end">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                       class="bi bi-explicit" viewBox="0 0 16 16">
+  <path d="M6.826 10.88H10.5V12h-5V4.002h5v1.12H6.826V7.4h3.457v1.073H6.826v2.408Z"/>
+  <path d="M2.5 0A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0h-11ZM1 2.5A1.5 1.5 0 0 1 2.5 1h11A1.5 1.5 0 0 1 15 2.5v11a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-11Z"/>
+</svg></span>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="col-sm-1 col-6 me-sm-0 justify-content-end">
+                        </div>
+                    </f:else>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</div>

@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="accordion mt-4" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <b><f:count>{album.ratings}</f:count>&nbsp;Bewertungen</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fas fa-star"></i><i
+                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                    class="far fa-star"></i></span> {album.avgRatings}
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+             data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <f:for each="{album.ratings}" as="rating">
+                    <div class="row my-4">
+                        <div class="row d-flex">
+                            <div class="col">
+                                <b>{rating.name}</b>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <f:comment>
+                                    <span><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="far fa-star"></i><i
+                                            class="far fa-star"></i><i class="far fa-star"></i></span></f:comment>
+                                {rating.stars} stars
+                            </div>
+                        </div>
+                        <div>{rating.description->f:format.html()}
+                        </div>
+                        <div class="text-muted">
+                            <span>von: {rating.author}</span>&nbsp;&nbsp;&nbsp;<span>am: {rating.date->f:format.date()}</span>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</div>
