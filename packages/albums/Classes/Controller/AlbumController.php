@@ -62,7 +62,6 @@ class AlbumController
   public function listAction(array $demands=[]){
   
     $filter=new Filter();
-    $this->view->assign('filter', $filter);
     if($demands['beforeToday']){
       $filter->setReleased(true);
     }
@@ -72,11 +71,11 @@ class AlbumController
     if($demands['appleMusicAvailable']){
       $filter->setAppleMusicAvailable(true);
     }
-    if($demands['isExplicit']){
+/*    if($demands['isExplicit']){
       $filter->setIsExplicit(true);
     }else{
       $filter->setIsExplicit(false);
-    }
+    }*/
     
     $this->view->assign('filter', $filter);
     

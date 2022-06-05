@@ -11,7 +11,21 @@ class Filter{
   protected bool $spotifyAvailable = false;
   protected bool $appleMusicAvailable = false;
   protected string $genre = "";
-  protected bool $isExplicit = false;
+  protected bool $explicit = false;
+  
+  /**
+   * @return bool
+   */
+  public function isExplicit(): bool{
+    return $this->explicit;
+  }
+  
+  /**
+   * @param bool $explicit
+   */
+  public function setExplicit(bool $explicit): void{
+    $this->explicit=$explicit;
+  }
   /*protected bool $released = false;
   protected $releaseDate = null;*/
   protected $albums = 0;
@@ -76,19 +90,6 @@ class Filter{
     $this->appleMusicAvailable=$appleMusicAvailable;
   }
   
-  /**
-   * @return bool
-   */
-  public function isExplicit(): bool{
-    return $this->isExplicit;
-  }
-  
-  /**
-   * @param bool $isExplicit
-   */
-  public function setIsExplicit(bool $isExplicit): void{
-    $this->isExplicit=$isExplicit;
-  }
   
   /**
    * @return bool

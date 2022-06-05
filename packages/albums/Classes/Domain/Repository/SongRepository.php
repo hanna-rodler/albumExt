@@ -12,7 +12,7 @@ use HannaRodler\Albums\Domain\Model\Dto\Filter;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- * (c) 2022 
+ * (c) 2022
  */
 
 /**
@@ -20,33 +20,26 @@ use HannaRodler\Albums\Domain\Model\Dto\Filter;
  */
 class SongRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-
-    /**
-     * @param Filter $filter
-     */
-    public function findByFilter(Filter $filter)
-    {
-        $query = $this->createQuery();
-      $query->setOrderings(['name' => 'ASC']);
-        $query->getQuerySettings()->setRespectStoragePage(false);
-        $constraints = [];
-        /*if ($filter->isSpotifyAvailable()) {
-            $constraints[] = $query->equals('spotifyAvailable', true);
-        }
-        if ($filter->isAppleMusicAvailable()) {
-            $constraints[] = $query->equals('appleMusicAvailable', true);
-        }*/
-        
-        if($filter->isExplicit()){
-          $constraints[]=$query->equals('explicitContent', true);
-        }
-        if(!$filter->isExplicit()){
-          $constraints[]=$query->equals('explicitContent', false);
-        }
-        
-        if (!empty($constraints)) {
-            $query->matching($query->logicalAnd($constraints));
-        }
-        return $query->execute();
+  
+  /**
+   * @param Filter $filter
+   */
+  public function findByFilter(Filter $filter){
+    $query=$this->createQuery();
+    $query->setOrderings(['name'=>'ASC']);
+    $query->getQuerySettings()->setRespectStoragePage(false);
+    $constraints=[];
+    
+    if($filter->isExplicit()){
+      $constraints[]=$query->equals('explicitContent', true);
     }
+    if(!$filter->isExplicit()){
+      $constraints[]=$query->equals('explicitContent', false);
+    }
+    
+    if(!empty($constraints)){
+      $query->matching($query->logicalAnd($constraints));
+    }
+    return $query->execute();
+  }
 }
