@@ -55,9 +55,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                             <div class="col-sm-5 col-12">
                                 <f:for each="{song.allInterprets}" as="interpret">
                                     <f:link.action action="show" controller="Interpret"
-                                                   arguments="{interpret:interpret}"
-                                                   pageUid="{settings.interpreters.detailPage}" pluginName="interpreters">
-                                        <span>{interpret.name}</span>
+                                                   arguments="{interpret:interpret}" pluginName="interpreter"
+                                                   pageUid="{settings.interpreters.detailPage}">
+                                        {interpret.name}
                                     </f:link.action>
                                 </f:for>
                             </div>

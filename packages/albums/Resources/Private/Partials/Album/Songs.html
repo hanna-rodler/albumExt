@@ -4,7 +4,7 @@
         <f:for each="{songs}" as="song">
             <li class="list-group-item d-sm-flex justify-content-sm-between align-items-sm-start">
                 <div class="col-sm-5 col-12">
-                    <f:link.action pageUid="{settings.songs.detailPage}" pluginName="songs" action="show"
+                    <f:link.action pageUid="{settings.songs.detailPage}" action="show" controller="Song"
                                    arguments="{song : song}">{song.name}
                     </f:link.action>
                     <!-- TODO: link to correct show view-->
@@ -12,9 +12,9 @@
                 <div class="col-sm-5 col-12">
                     <f:for each="{song.allInterprets}" as="interpret">
                         <f:link.action action="show" controller="Interpret"
-                                       arguments="{interpret:interpret}"
+                                       arguments="{interpret:interpret}" pluginName="interpreter"
                                        pageUid="{settings.interpreters.detailPage}">
-                            <span>{interpret.name}</span>
+                            {interpret.name}
                         </f:link.action>
                     </f:for>
                 </div>

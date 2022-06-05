@@ -33,7 +33,7 @@ class Genre extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $name
      */
-    public function getName()
+    public function getName():string
     {
         return $this->name;
     }
